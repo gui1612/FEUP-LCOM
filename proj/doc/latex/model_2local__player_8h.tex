@@ -1,0 +1,153 @@
+\hypertarget{model_2local__player_8h}{}\doxysection{include/game/model/local\+\_\+player.h File Reference}
+\label{model_2local__player_8h}\index{include/game/model/local\_player.h@{include/game/model/local\_player.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}errors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game/layout.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game/model/cell\+\_\+background.\+h\char`\"{}}\newline
+Include dependency graph for local\+\_\+player.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlocal__player}{local\+\_\+player}}
+\begin{DoxyCompactList}\small\item\em Handles a player instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{model_2local__player_8h_a5fa44b246c6f2b4bc3ac7a5e1d00ea12}{local\+\_\+player\+\_\+submission\+\_\+status}} \{ \mbox{\hyperlink{model_2local__player_8h_a5fa44b246c6f2b4bc3ac7a5e1d00ea12a647f6104e233a6f03398279039dcb07c}{TOO\+\_\+\+SHORT}}
+, \mbox{\hyperlink{model_2local__player_8h_a5fa44b246c6f2b4bc3ac7a5e1d00ea12a4b5d96d3a3563361230ce8754d119abd}{NOT\+\_\+\+IN\+\_\+\+WORDLIST}}
+, \mbox{\hyperlink{model_2local__player_8h_a5fa44b246c6f2b4bc3ac7a5e1d00ea12a50cef52d778210eed22594237c887d66}{SUBMITTED}}
+, \mbox{\hyperlink{model_2local__player_8h_a5fa44b246c6f2b4bc3ac7a5e1d00ea12adbd1812bee789fbf3548cf79d3f2b400}{FINISHED}}
+ \}
+\begin{DoxyCompactList}\small\item\em Handles the status of a player word submission. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlocal__player}{local\+\_\+player}} $\ast$() \mbox{\hyperlink{model_2local__player_8h_a418af0248f2c3c87ba6b9942ed728be9}{local\+\_\+player\+\_\+get}} ()
+\item 
+void() \mbox{\hyperlink{model_2local__player_8h_a8c0f6c830d608623b8a693cc0c53fec9}{local\+\_\+player\+\_\+reset}} ()
+\item 
+char() \mbox{\hyperlink{model_2local__player_8h_ac622eaee07ae9557297648f46a6f9977}{local\+\_\+player\+\_\+read}} ()
+\item 
+char() \mbox{\hyperlink{model_2local__player_8h_af7dd5f0e31ba358cd6903f165e2e4a8b}{local\+\_\+player\+\_\+read\+\_\+before}} ()
+\item 
+char() \mbox{\hyperlink{model_2local__player_8h_a5ff29d9fc8e501ec402bb9a5ebb9f384}{local\+\_\+player\+\_\+read\+\_\+after}} ()
+\item 
+char() \mbox{\hyperlink{model_2local__player_8h_ad3182c12e29e108f0b946ce4a5fbeef4}{local\+\_\+player\+\_\+read\+\_\+last\+\_\+of\+\_\+row}} ()
+\item 
+void() \mbox{\hyperlink{model_2local__player_8h_a4d309b7ac6f053f37fcf98da5120bb62}{local\+\_\+player\+\_\+write}} (char ch)
+\item 
+void() \mbox{\hyperlink{model_2local__player_8h_a0bc65f0e591dfc4e40b2482e074a2566}{local\+\_\+player\+\_\+goto}} (uint8\+\_\+t x, uint8\+\_\+t y)
+\item 
+void() \mbox{\hyperlink{model_2local__player_8h_a5a97ca88ebf1e4a9587afaf240c20f07}{local\+\_\+player\+\_\+forward}} ()
+\item 
+void() \mbox{\hyperlink{model_2local__player_8h_abe6f6b8731ca140a5fdf600bb6c4bd0b}{local\+\_\+player\+\_\+backward}} ()
+\item 
+void() \mbox{\hyperlink{model_2local__player_8h_a223dbcc38ee6b2da68aac1d64da6f097}{local\+\_\+player\+\_\+downward}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{model_2local__player_8h_a5fa44b246c6f2b4bc3ac7a5e1d00ea12}\label{model_2local__player_8h_a5fa44b246c6f2b4bc3ac7a5e1d00ea12}} 
+\index{local\_player.h@{local\_player.h}!local\_player\_submission\_status@{local\_player\_submission\_status}}
+\index{local\_player\_submission\_status@{local\_player\_submission\_status}!local\_player.h@{local\_player.h}}
+\doxysubsubsection{\texorpdfstring{local\_player\_submission\_status}{local\_player\_submission\_status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{model_2local__player_8h_a5fa44b246c6f2b4bc3ac7a5e1d00ea12}{local\+\_\+player\+\_\+submission\+\_\+status}}}
+
+
+
+Handles the status of a player word submission. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOO\_SHORT@{TOO\_SHORT}!local\_player.h@{local\_player.h}}\index{local\_player.h@{local\_player.h}!TOO\_SHORT@{TOO\_SHORT}}}\mbox{\Hypertarget{model_2local__player_8h_a5fa44b246c6f2b4bc3ac7a5e1d00ea12a647f6104e233a6f03398279039dcb07c}\label{model_2local__player_8h_a5fa44b246c6f2b4bc3ac7a5e1d00ea12a647f6104e233a6f03398279039dcb07c}} 
+TOO\+\_\+\+SHORT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NOT\_IN\_WORDLIST@{NOT\_IN\_WORDLIST}!local\_player.h@{local\_player.h}}\index{local\_player.h@{local\_player.h}!NOT\_IN\_WORDLIST@{NOT\_IN\_WORDLIST}}}\mbox{\Hypertarget{model_2local__player_8h_a5fa44b246c6f2b4bc3ac7a5e1d00ea12a4b5d96d3a3563361230ce8754d119abd}\label{model_2local__player_8h_a5fa44b246c6f2b4bc3ac7a5e1d00ea12a4b5d96d3a3563361230ce8754d119abd}} 
+NOT\+\_\+\+IN\+\_\+\+WORDLIST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SUBMITTED@{SUBMITTED}!local\_player.h@{local\_player.h}}\index{local\_player.h@{local\_player.h}!SUBMITTED@{SUBMITTED}}}\mbox{\Hypertarget{model_2local__player_8h_a5fa44b246c6f2b4bc3ac7a5e1d00ea12a50cef52d778210eed22594237c887d66}\label{model_2local__player_8h_a5fa44b246c6f2b4bc3ac7a5e1d00ea12a50cef52d778210eed22594237c887d66}} 
+SUBMITTED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FINISHED@{FINISHED}!local\_player.h@{local\_player.h}}\index{local\_player.h@{local\_player.h}!FINISHED@{FINISHED}}}\mbox{\Hypertarget{model_2local__player_8h_a5fa44b246c6f2b4bc3ac7a5e1d00ea12adbd1812bee789fbf3548cf79d3f2b400}\label{model_2local__player_8h_a5fa44b246c6f2b4bc3ac7a5e1d00ea12adbd1812bee789fbf3548cf79d3f2b400}} 
+FINISHED&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{model_2local__player_8h_source_l00013}{13}} of file \mbox{\hyperlink{model_2local__player_8h_source}{local\+\_\+player.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{model_2local__player_8h_abe6f6b8731ca140a5fdf600bb6c4bd0b}\label{model_2local__player_8h_abe6f6b8731ca140a5fdf600bb6c4bd0b}} 
+\index{local\_player.h@{local\_player.h}!local\_player\_backward@{local\_player\_backward}}
+\index{local\_player\_backward@{local\_player\_backward}!local\_player.h@{local\_player.h}}
+\doxysubsubsection{\texorpdfstring{local\_player\_backward()}{local\_player\_backward()}}
+{\footnotesize\ttfamily void() local\+\_\+player\+\_\+backward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{model_2local__player_8h_a223dbcc38ee6b2da68aac1d64da6f097}\label{model_2local__player_8h_a223dbcc38ee6b2da68aac1d64da6f097}} 
+\index{local\_player.h@{local\_player.h}!local\_player\_downward@{local\_player\_downward}}
+\index{local\_player\_downward@{local\_player\_downward}!local\_player.h@{local\_player.h}}
+\doxysubsubsection{\texorpdfstring{local\_player\_downward()}{local\_player\_downward()}}
+{\footnotesize\ttfamily void() local\+\_\+player\+\_\+downward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{model_2local__player_8h_a5a97ca88ebf1e4a9587afaf240c20f07}\label{model_2local__player_8h_a5a97ca88ebf1e4a9587afaf240c20f07}} 
+\index{local\_player.h@{local\_player.h}!local\_player\_forward@{local\_player\_forward}}
+\index{local\_player\_forward@{local\_player\_forward}!local\_player.h@{local\_player.h}}
+\doxysubsubsection{\texorpdfstring{local\_player\_forward()}{local\_player\_forward()}}
+{\footnotesize\ttfamily void() local\+\_\+player\+\_\+forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{model_2local__player_8h_a418af0248f2c3c87ba6b9942ed728be9}\label{model_2local__player_8h_a418af0248f2c3c87ba6b9942ed728be9}} 
+\index{local\_player.h@{local\_player.h}!local\_player\_get@{local\_player\_get}}
+\index{local\_player\_get@{local\_player\_get}!local\_player.h@{local\_player.h}}
+\doxysubsubsection{\texorpdfstring{local\_player\_get()}{local\_player\_get()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlocal__player}{local\+\_\+player}} $\ast$() local\+\_\+player\+\_\+get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{model_2local__player_8h_a0bc65f0e591dfc4e40b2482e074a2566}\label{model_2local__player_8h_a0bc65f0e591dfc4e40b2482e074a2566}} 
+\index{local\_player.h@{local\_player.h}!local\_player\_goto@{local\_player\_goto}}
+\index{local\_player\_goto@{local\_player\_goto}!local\_player.h@{local\_player.h}}
+\doxysubsubsection{\texorpdfstring{local\_player\_goto()}{local\_player\_goto()}}
+{\footnotesize\ttfamily void() local\+\_\+player\+\_\+goto (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{x,  }\item[{uint8\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{model_2local__player_8h_ac622eaee07ae9557297648f46a6f9977}\label{model_2local__player_8h_ac622eaee07ae9557297648f46a6f9977}} 
+\index{local\_player.h@{local\_player.h}!local\_player\_read@{local\_player\_read}}
+\index{local\_player\_read@{local\_player\_read}!local\_player.h@{local\_player.h}}
+\doxysubsubsection{\texorpdfstring{local\_player\_read()}{local\_player\_read()}}
+{\footnotesize\ttfamily char() local\+\_\+player\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{model_2local__player_8h_a5ff29d9fc8e501ec402bb9a5ebb9f384}\label{model_2local__player_8h_a5ff29d9fc8e501ec402bb9a5ebb9f384}} 
+\index{local\_player.h@{local\_player.h}!local\_player\_read\_after@{local\_player\_read\_after}}
+\index{local\_player\_read\_after@{local\_player\_read\_after}!local\_player.h@{local\_player.h}}
+\doxysubsubsection{\texorpdfstring{local\_player\_read\_after()}{local\_player\_read\_after()}}
+{\footnotesize\ttfamily char() local\+\_\+player\+\_\+read\+\_\+after (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{model_2local__player_8h_af7dd5f0e31ba358cd6903f165e2e4a8b}\label{model_2local__player_8h_af7dd5f0e31ba358cd6903f165e2e4a8b}} 
+\index{local\_player.h@{local\_player.h}!local\_player\_read\_before@{local\_player\_read\_before}}
+\index{local\_player\_read\_before@{local\_player\_read\_before}!local\_player.h@{local\_player.h}}
+\doxysubsubsection{\texorpdfstring{local\_player\_read\_before()}{local\_player\_read\_before()}}
+{\footnotesize\ttfamily char() local\+\_\+player\+\_\+read\+\_\+before (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{model_2local__player_8h_ad3182c12e29e108f0b946ce4a5fbeef4}\label{model_2local__player_8h_ad3182c12e29e108f0b946ce4a5fbeef4}} 
+\index{local\_player.h@{local\_player.h}!local\_player\_read\_last\_of\_row@{local\_player\_read\_last\_of\_row}}
+\index{local\_player\_read\_last\_of\_row@{local\_player\_read\_last\_of\_row}!local\_player.h@{local\_player.h}}
+\doxysubsubsection{\texorpdfstring{local\_player\_read\_last\_of\_row()}{local\_player\_read\_last\_of\_row()}}
+{\footnotesize\ttfamily char() local\+\_\+player\+\_\+read\+\_\+last\+\_\+of\+\_\+row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{model_2local__player_8h_a8c0f6c830d608623b8a693cc0c53fec9}\label{model_2local__player_8h_a8c0f6c830d608623b8a693cc0c53fec9}} 
+\index{local\_player.h@{local\_player.h}!local\_player\_reset@{local\_player\_reset}}
+\index{local\_player\_reset@{local\_player\_reset}!local\_player.h@{local\_player.h}}
+\doxysubsubsection{\texorpdfstring{local\_player\_reset()}{local\_player\_reset()}}
+{\footnotesize\ttfamily void() local\+\_\+player\+\_\+reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{model_2local__player_8h_a4d309b7ac6f053f37fcf98da5120bb62}\label{model_2local__player_8h_a4d309b7ac6f053f37fcf98da5120bb62}} 
+\index{local\_player.h@{local\_player.h}!local\_player\_write@{local\_player\_write}}
+\index{local\_player\_write@{local\_player\_write}!local\_player.h@{local\_player.h}}
+\doxysubsubsection{\texorpdfstring{local\_player\_write()}{local\_player\_write()}}
+{\footnotesize\ttfamily void() local\+\_\+player\+\_\+write (\begin{DoxyParamCaption}\item[{char}]{ch }\end{DoxyParamCaption})}
+

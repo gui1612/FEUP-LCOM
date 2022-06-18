@@ -1,0 +1,227 @@
+\hypertarget{graphics_8h}{}\doxysection{include/graphics/graphics.h File Reference}
+\label{graphics_8h}\index{include/graphics/graphics.h@{include/graphics/graphics.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}errors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vector/vector.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game/model/cell\+\_\+background.\+h\char`\"{}}\newline
+Include dependency graph for graphics.\+h\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{graphics_8h_acf4477b77dc08d6fb34d25a5b5ea11eb}{GRAPHICS\+\_\+\+ALFA\+\_\+\+WIDTH}}~64
+\item 
+\#define \mbox{\hyperlink{graphics_8h_adc548eb861ace2cfd738db10d32e785e}{GRAPHICS\+\_\+\+ALFA\+\_\+\+HEIGHT}}~64
+\item 
+\#define \mbox{\hyperlink{graphics_8h_a6ad67fd9626a8f735ac14697b2c76ca8}{GRAPHICS\+\_\+\+NUM\+\_\+\+WIDTH}}~32
+\item 
+\#define \mbox{\hyperlink{graphics_8h_a94d0a3a7e03bf9e5fca1d6687390c8f0}{GRAPHICS\+\_\+\+NUM\+\_\+\+HEIGHT}}~32
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{graphics_8h_a7416f376ac8a7dc2751522900363a0b5}{graphics\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Handles operations to inicialize the graphics for usage. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{graphics_8h_a5856428480377fff19f95454750ead8a}{graphics\+\_\+cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Handles operations to terminate the graphics usage. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{graphics_8h_ad87f5f5d33340750687e3c1e603149f5}{graphics\+\_\+draw\+\_\+char}} (uint16\+\_\+t x, uint16\+\_\+t y, char ch)
+\begin{DoxyCompactList}\small\item\em Draws a character on the VBE. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{graphics_8h_a13c80d5c702722ccaaf2c7d9757188d0}{graphics\+\_\+draw\+\_\+text}} (uint16\+\_\+t x, uint16\+\_\+t y, char str\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Draws a string of characters on the VBE. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{graphics_8h_a8fc2e28671eb416e572dc4d322520b58}{graphics\+\_\+draw\+\_\+small\+\_\+text}} (uint16\+\_\+t x, uint16\+\_\+t y, char str\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Draws small text. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{graphics_8h_a42a9d188354c3500c99df84ea51dc114}{graphics\+\_\+draw\+\_\+numbers}} (uint16\+\_\+t x, uint16\+\_\+t y, char str\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Draws a string of numbers on the VBE. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{graphics_8h_ae0d7902bf4b02882b9bf5c719c069a68}{graphics\+\_\+draw\+\_\+square}} (uint16\+\_\+t x, uint16\+\_\+t y, \mbox{\hyperlink{cell__background_8h_a5cba11b0fcb6c52f8adfb552fe2e01c3}{cell\+\_\+background}} background)
+\begin{DoxyCompactList}\small\item\em Draws a board cell on the VBE. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{graphics_8h_af4c9cc2ab1740f4e3038a31ac6d78e71}{graphics\+\_\+draw\+\_\+screen}} ()
+\begin{DoxyCompactList}\small\item\em Draws the whole game to the VBE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{graphics_8h_adc548eb861ace2cfd738db10d32e785e}\label{graphics_8h_adc548eb861ace2cfd738db10d32e785e}} 
+\index{graphics.h@{graphics.h}!GRAPHICS\_ALFA\_HEIGHT@{GRAPHICS\_ALFA\_HEIGHT}}
+\index{GRAPHICS\_ALFA\_HEIGHT@{GRAPHICS\_ALFA\_HEIGHT}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{GRAPHICS\_ALFA\_HEIGHT}{GRAPHICS\_ALFA\_HEIGHT}}
+{\footnotesize\ttfamily \#define GRAPHICS\+\_\+\+ALFA\+\_\+\+HEIGHT~64}
+
+
+
+Definition at line \mbox{\hyperlink{graphics_8h_source_l00011}{11}} of file \mbox{\hyperlink{graphics_8h_source}{graphics.\+h}}.
+
+\mbox{\Hypertarget{graphics_8h_acf4477b77dc08d6fb34d25a5b5ea11eb}\label{graphics_8h_acf4477b77dc08d6fb34d25a5b5ea11eb}} 
+\index{graphics.h@{graphics.h}!GRAPHICS\_ALFA\_WIDTH@{GRAPHICS\_ALFA\_WIDTH}}
+\index{GRAPHICS\_ALFA\_WIDTH@{GRAPHICS\_ALFA\_WIDTH}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{GRAPHICS\_ALFA\_WIDTH}{GRAPHICS\_ALFA\_WIDTH}}
+{\footnotesize\ttfamily \#define GRAPHICS\+\_\+\+ALFA\+\_\+\+WIDTH~64}
+
+
+
+Definition at line \mbox{\hyperlink{graphics_8h_source_l00010}{10}} of file \mbox{\hyperlink{graphics_8h_source}{graphics.\+h}}.
+
+\mbox{\Hypertarget{graphics_8h_a94d0a3a7e03bf9e5fca1d6687390c8f0}\label{graphics_8h_a94d0a3a7e03bf9e5fca1d6687390c8f0}} 
+\index{graphics.h@{graphics.h}!GRAPHICS\_NUM\_HEIGHT@{GRAPHICS\_NUM\_HEIGHT}}
+\index{GRAPHICS\_NUM\_HEIGHT@{GRAPHICS\_NUM\_HEIGHT}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{GRAPHICS\_NUM\_HEIGHT}{GRAPHICS\_NUM\_HEIGHT}}
+{\footnotesize\ttfamily \#define GRAPHICS\+\_\+\+NUM\+\_\+\+HEIGHT~32}
+
+
+
+Definition at line \mbox{\hyperlink{graphics_8h_source_l00014}{14}} of file \mbox{\hyperlink{graphics_8h_source}{graphics.\+h}}.
+
+\mbox{\Hypertarget{graphics_8h_a6ad67fd9626a8f735ac14697b2c76ca8}\label{graphics_8h_a6ad67fd9626a8f735ac14697b2c76ca8}} 
+\index{graphics.h@{graphics.h}!GRAPHICS\_NUM\_WIDTH@{GRAPHICS\_NUM\_WIDTH}}
+\index{GRAPHICS\_NUM\_WIDTH@{GRAPHICS\_NUM\_WIDTH}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{GRAPHICS\_NUM\_WIDTH}{GRAPHICS\_NUM\_WIDTH}}
+{\footnotesize\ttfamily \#define GRAPHICS\+\_\+\+NUM\+\_\+\+WIDTH~32}
+
+
+
+Definition at line \mbox{\hyperlink{graphics_8h_source_l00013}{13}} of file \mbox{\hyperlink{graphics_8h_source}{graphics.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{graphics_8h_a5856428480377fff19f95454750ead8a}\label{graphics_8h_a5856428480377fff19f95454750ead8a}} 
+\index{graphics.h@{graphics.h}!graphics\_cleanup@{graphics\_cleanup}}
+\index{graphics\_cleanup@{graphics\_cleanup}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{graphics\_cleanup()}{graphics\_cleanup()}}
+{\footnotesize\ttfamily int() graphics\+\_\+cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles operations to terminate the graphics usage. 
+
+\begin{DoxyReturn}{Returns}
+0 if the operation was successful, non-\/zero otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphics_8h_ad87f5f5d33340750687e3c1e603149f5}\label{graphics_8h_ad87f5f5d33340750687e3c1e603149f5}} 
+\index{graphics.h@{graphics.h}!graphics\_draw\_char@{graphics\_draw\_char}}
+\index{graphics\_draw\_char@{graphics\_draw\_char}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{graphics\_draw\_char()}{graphics\_draw\_char()}}
+{\footnotesize\ttfamily void() graphics\+\_\+draw\+\_\+char (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{char}]{ch }\end{DoxyParamCaption})}
+
+
+
+Draws a character on the VBE. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The top-\/leftest pixel\textquotesingle{}s x position \\
+\hline
+{\em y} & the top-\/leftest pixel\textquotesingle{}s y position \\
+\hline
+{\em ch} & The character to draw (in lower-\/case) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the operation was successful, non-\/zero otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphics_8h_a42a9d188354c3500c99df84ea51dc114}\label{graphics_8h_a42a9d188354c3500c99df84ea51dc114}} 
+\index{graphics.h@{graphics.h}!graphics\_draw\_numbers@{graphics\_draw\_numbers}}
+\index{graphics\_draw\_numbers@{graphics\_draw\_numbers}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{graphics\_draw\_numbers()}{graphics\_draw\_numbers()}}
+{\footnotesize\ttfamily void() graphics\+\_\+draw\+\_\+numbers (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{char}]{str\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Draws a string of numbers on the VBE. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The top-\/leftest pixel\textquotesingle{}s x position \\
+\hline
+{\em y} & the top-\/leftest pixel\textquotesingle{}s y position \\
+\hline
+{\em str} & The string to draw (digits only) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the operation was successful, non-\/zero otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphics_8h_af4c9cc2ab1740f4e3038a31ac6d78e71}\label{graphics_8h_af4c9cc2ab1740f4e3038a31ac6d78e71}} 
+\index{graphics.h@{graphics.h}!graphics\_draw\_screen@{graphics\_draw\_screen}}
+\index{graphics\_draw\_screen@{graphics\_draw\_screen}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{graphics\_draw\_screen()}{graphics\_draw\_screen()}}
+{\footnotesize\ttfamily void() graphics\+\_\+draw\+\_\+screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the whole game to the VBE. 
+
+Draws the content displayed onthe screen to the VBE \mbox{\Hypertarget{graphics_8h_a8fc2e28671eb416e572dc4d322520b58}\label{graphics_8h_a8fc2e28671eb416e572dc4d322520b58}} 
+\index{graphics.h@{graphics.h}!graphics\_draw\_small\_text@{graphics\_draw\_small\_text}}
+\index{graphics\_draw\_small\_text@{graphics\_draw\_small\_text}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{graphics\_draw\_small\_text()}{graphics\_draw\_small\_text()}}
+{\footnotesize\ttfamily void() graphics\+\_\+draw\+\_\+small\+\_\+text (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{char}]{str\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Draws small text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x coordinate \\
+\hline
+{\em y} & y coordinate \\
+\hline
+{\em str} & text to draw \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{graphics_8h_ae0d7902bf4b02882b9bf5c719c069a68}\label{graphics_8h_ae0d7902bf4b02882b9bf5c719c069a68}} 
+\index{graphics.h@{graphics.h}!graphics\_draw\_square@{graphics\_draw\_square}}
+\index{graphics\_draw\_square@{graphics\_draw\_square}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{graphics\_draw\_square()}{graphics\_draw\_square()}}
+{\footnotesize\ttfamily void() graphics\+\_\+draw\+\_\+square (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{\mbox{\hyperlink{cell__background_8h_a5cba11b0fcb6c52f8adfb552fe2e01c3}{cell\+\_\+background}}}]{background }\end{DoxyParamCaption})}
+
+
+
+Draws a board cell on the VBE. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The top-\/leftest pixel\textquotesingle{}s x position \\
+\hline
+{\em y} & the top-\/leftest pixel\textquotesingle{}s y position \\
+\hline
+{\em background} & The cell\textquotesingle{}s background \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the operation was successful, non-\/zero otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphics_8h_a13c80d5c702722ccaaf2c7d9757188d0}\label{graphics_8h_a13c80d5c702722ccaaf2c7d9757188d0}} 
+\index{graphics.h@{graphics.h}!graphics\_draw\_text@{graphics\_draw\_text}}
+\index{graphics\_draw\_text@{graphics\_draw\_text}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{graphics\_draw\_text()}{graphics\_draw\_text()}}
+{\footnotesize\ttfamily void() graphics\+\_\+draw\+\_\+text (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{char}]{str\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Draws a string of characters on the VBE. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The top-\/leftest pixel\textquotesingle{}s x position \\
+\hline
+{\em y} & the top-\/leftest pixel\textquotesingle{}s y position \\
+\hline
+{\em str} & The string to draw (in lower-\/case) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the operation was successful, non-\/zero otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphics_8h_a7416f376ac8a7dc2751522900363a0b5}\label{graphics_8h_a7416f376ac8a7dc2751522900363a0b5}} 
+\index{graphics.h@{graphics.h}!graphics\_init@{graphics\_init}}
+\index{graphics\_init@{graphics\_init}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{graphics\_init()}{graphics\_init()}}
+{\footnotesize\ttfamily int() graphics\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles operations to inicialize the graphics for usage. 
+
+\begin{DoxyReturn}{Returns}
+0 if the operation was successful, non-\/zero otherwise 
+\end{DoxyReturn}

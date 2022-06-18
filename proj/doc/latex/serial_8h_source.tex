@@ -1,0 +1,139 @@
+\hypertarget{serial_8h_source}{}\doxysection{serial.\+h}
+\label{serial_8h_source}\index{include/devices/serial.h@{include/devices/serial.h}}
+\mbox{\hyperlink{serial_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00004}00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{errors_8h}{errors.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{events_8h}{events/events.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00007}00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{queue_8h}{queue/queue.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00009}\mbox{\hyperlink{serial_8h_a3d473c87ee71bda6b0f1c3d55846a5d7}{00009}} \textcolor{preprocessor}{\#define SERIAL\_IRQ 4}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00011}\mbox{\hyperlink{serial_8h_af61de3c0f7f63e13eb9b47e4b46ef431}{00011}} \textcolor{preprocessor}{\#define SERIAL\_COM1\_THR 0x3F8}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00012}\mbox{\hyperlink{serial_8h_a20399a5b57e88cab201f2ca24ad9be2a}{00012}} \textcolor{preprocessor}{\#define SERIAL\_COM1\_RBR 0x3F8}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00013}\mbox{\hyperlink{serial_8h_ae4408aed7b61556f6d1fdf60b2b9bc71}{00013}} \textcolor{preprocessor}{\#define SERIAL\_COM1\_IER 0x3F9}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00014}\mbox{\hyperlink{serial_8h_ab571028ae2555a7ff990359706adc16a}{00014}} \textcolor{preprocessor}{\#define SERIAL\_COM1\_IIR 0x3FA}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00015}\mbox{\hyperlink{serial_8h_ae8185b8138587109104133f38d8e269e}{00015}} \textcolor{preprocessor}{\#define SERIAL\_COM1\_FCR 0x3FA}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00016}\mbox{\hyperlink{serial_8h_abb3eb2283ee32e1598f88b62df94ac63}{00016}} \textcolor{preprocessor}{\#define SERIAL\_COM1\_LCR 0x3FB}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00017}\mbox{\hyperlink{serial_8h_a1504ebe6a88ef5d0580082747b7274a4}{00017}} \textcolor{preprocessor}{\#define SERIAL\_COM1\_LSR 0x3FD}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00018}\mbox{\hyperlink{serial_8h_a696beb570dbd519b025590398351a8e6}{00018}} \textcolor{preprocessor}{\#define SERIAL\_COM1\_DLAB\_LOW\_BYTE 0x3F8}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00019}\mbox{\hyperlink{serial_8h_ac21a2638975b3d7c406ef055256cad38}{00019}} \textcolor{preprocessor}{\#define SERIAL\_COM1\_DLAB\_HIGH\_BYTE 0x3F9}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00021}\mbox{\hyperlink{serial_8h_a3ad83a8edfc2fe6bdbdff6cf6429e654}{00021}} \textcolor{preprocessor}{\#define SERIAL\_IIR\_INT\_PENDING BIT(0)}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00022}\mbox{\hyperlink{serial_8h_aa817e8b3862a0f04af5ca11cee3cb049}{00022}} \textcolor{preprocessor}{\#define SERIAL\_IIR\_INT (BIT(3) | BIT(2) | BIT(1))}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00024}\mbox{\hyperlink{serial_8h_a5447a289cecf68cc35767ce807da6472}{00024}} \textcolor{preprocessor}{\#define SERIAL\_IER\_MODEM\_STATUS BIT(3)}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00025}\mbox{\hyperlink{serial_8h_ad53beb1ced916ba22572643950bddfbf}{00025}} \textcolor{preprocessor}{\#define SERIAL\_IER\_RECEIVER\_LINE\_STATUS BIT(2)}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00026}\mbox{\hyperlink{serial_8h_af812aaa30bcea37361cdb927b390c954}{00026}} \textcolor{preprocessor}{\#define SERIAL\_IER\_TRANSMITTER\_HOLDING\_REGISTER\_EMPTY BIT(1)}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00027}\mbox{\hyperlink{serial_8h_a56414ea8a8c17bac3dee29508829297c}{00027}} \textcolor{preprocessor}{\#define SERIAL\_IER\_RECEIVED\_DATA\_AVAILABLE BIT(0)}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00029}\mbox{\hyperlink{serial_8h_a024358639873639af328464de480d1c3}{00029}} \textcolor{preprocessor}{\#define SERIAL\_LSR\_FIFO\_ERROR BIT(7)}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00030}\mbox{\hyperlink{serial_8h_ab99f566f5a3e0e66bd43024ce3e2bb40}{00030}} \textcolor{preprocessor}{\#define SERIAL\_LSR\_EMPTY\_DATA\_HOLDING\_REGISTERS BIT(6)}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00031}\mbox{\hyperlink{serial_8h_acd19239081886159e5b07c563ea16fdc}{00031}} \textcolor{preprocessor}{\#define SERIAL\_LSR\_EMPTY\_TRANSMITTER\_HOLDING\_REGISTER BIT(5)}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00032}\mbox{\hyperlink{serial_8h_a5a96a62a3a1af3d7a0c6f26344251930}{00032}} \textcolor{preprocessor}{\#define SERIAL\_LSR\_BREAK\_INTERRUPT BIT(4)}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00033}\mbox{\hyperlink{serial_8h_ae49edcf851482fccbcf5f8a549053123}{00033}} \textcolor{preprocessor}{\#define SERIAL\_LSR\_FRAMING\_ERROR BIT(3)}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00034}\mbox{\hyperlink{serial_8h_a3a17c70e60373ccdc42d71797bde4d18}{00034}} \textcolor{preprocessor}{\#define SERIAL\_LSR\_PARITY\_ERROR BIT(2)}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00035}\mbox{\hyperlink{serial_8h_a05ebbd638a549e9f6bbcaf3909bfe85a}{00035}} \textcolor{preprocessor}{\#define SERIAL\_LSR\_OVERRUN\_ERROR BIT(1)}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00036}\mbox{\hyperlink{serial_8h_aa4c1645388ce09d4ce446b7c641f14da}{00036}} \textcolor{preprocessor}{\#define SERIAL\_LSR\_DATA\_READY BIT(0)}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00038}\mbox{\hyperlink{serial_8h_ab6d11f6e29f222693def9d96bc0cdefe}{00038}} \textcolor{preprocessor}{\#define SERIAL\_LCR\_ENABLE\_DLAB BIT(7)}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00039}\mbox{\hyperlink{serial_8h_aefa84c2734548bac0a3679007827f2cd}{00039}} \textcolor{preprocessor}{\#define SERIAL\_LCR\_DISABLE\_DLAB (0)}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00041}\mbox{\hyperlink{serial_8h_a77657cbfcdf65da63a075b991f355008}{00041}} \textcolor{preprocessor}{\#define SERIAL\_FCR\_ENABLE\_FIFO BIT(0)}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00042}\mbox{\hyperlink{serial_8h_adf3e1055cc34ec5b347cd184d1dde879}{00042}} \textcolor{preprocessor}{\#define SERIAL\_FCR\_CLEAR\_RECEIVE BIT(1)}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00043}\mbox{\hyperlink{serial_8h_a4b9b09046ae85e49951edd0c2daeccfa}{00043}} \textcolor{preprocessor}{\#define SERIAL\_FCR\_CLEAR\_TRANSMIT BIT(2)}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00045}\mbox{\hyperlink{serial_8h_a2e64679e800ee28d22c48edbf87b78c1}{00045}} \textcolor{preprocessor}{\#define SERIAL\_PACKET\_SIZE 6}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00050}\mbox{\hyperlink{serial_8h_a5a3961a2b4167b66506c77b966c94b06}{00050}} \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00051}\mbox{\hyperlink{serial_8h_a5a3961a2b4167b66506c77b966c94b06a67c6d2d94ff89b4836fdb9e67491ba74}{00051}}   \mbox{\hyperlink{serial_8h_a5a3961a2b4167b66506c77b966c94b06a67c6d2d94ff89b4836fdb9e67491ba74}{MODEM\_STATUS}},}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00052}\mbox{\hyperlink{serial_8h_a5a3961a2b4167b66506c77b966c94b06a112b06de96d80c6128c1bda02e5a09ec}{00052}}   \mbox{\hyperlink{serial_8h_a5a3961a2b4167b66506c77b966c94b06a112b06de96d80c6128c1bda02e5a09ec}{TRANSMITTER\_HOLDING\_REGISTER\_EMPTY}},}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00053}\mbox{\hyperlink{serial_8h_a5a3961a2b4167b66506c77b966c94b06ae33705f9d9baaf99de3839af72dcdd5b}{00053}}   \mbox{\hyperlink{serial_8h_a5a3961a2b4167b66506c77b966c94b06ae33705f9d9baaf99de3839af72dcdd5b}{RECEIVED\_DATA\_AVAILABLE}},}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00054}00054   \mbox{\hyperlink{serial_8h_a5a3961a2b4167b66506c77b966c94b06a313f6cba3b3ba1c043b0c601598bcc3e}{RECEIVER\_LINE\_STATUS}}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00055}\mbox{\hyperlink{serial_8h_a5a3961a2b4167b66506c77b966c94b06a313f6cba3b3ba1c043b0c601598bcc3e}{00055}} \} \mbox{\hyperlink{serial_8h_a5a3961a2b4167b66506c77b966c94b06}{serial\_interrupt}};}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00057}\mbox{\hyperlink{unionserial__interrupts}{00057}} \textcolor{keyword}{typedef} \textcolor{keyword}{union }\{}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00058}00058   }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00059}00059   \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00061}\mbox{\hyperlink{unionserial__interrupts_aeb186ee56b64554aba2f021670208468}{00061}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{unionserial__interrupts_aeb186ee56b64554aba2f021670208468}{interrupt\_pending}};}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00062}\mbox{\hyperlink{unionserial__interrupts_a37afd930bddf0482ceeacaaa06241edd}{00062}}     \mbox{\hyperlink{serial_8h_a5a3961a2b4167b66506c77b966c94b06}{serial\_interrupt}} \mbox{\hyperlink{unionserial__interrupts_a37afd930bddf0482ceeacaaa06241edd}{interrupt}};}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00063}00063     }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00064}\mbox{\hyperlink{unionserial__interrupts_a9458142cc3f11c52c99f6e2ed4d6e6f4}{00064}}   \} get;}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00066}00066   \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00068}\mbox{\hyperlink{unionserial__interrupts_a3862f6060f66db63148c9f2d540b1045}{00068}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{unionserial__interrupts_a3862f6060f66db63148c9f2d540b1045}{modem\_status}};}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00069}\mbox{\hyperlink{unionserial__interrupts_a6e3ada96622ab36903b9f1376216d5bd}{00069}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{unionserial__interrupts_a6e3ada96622ab36903b9f1376216d5bd}{transmitter\_holding\_register\_empty}};}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00070}\mbox{\hyperlink{unionserial__interrupts_a7cfb9892ea2646a48a09f3cc6b667f12}{00070}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{unionserial__interrupts_a7cfb9892ea2646a48a09f3cc6b667f12}{received\_data\_available}};}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00071}\mbox{\hyperlink{unionserial__interrupts_a69e6a6d49a53fa283d16ddf20bd80938}{00071}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{unionserial__interrupts_a69e6a6d49a53fa283d16ddf20bd80938}{receiver\_line\_status}};}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00073}\mbox{\hyperlink{unionserial__interrupts_ae111966464f7dd839071bafdb39bc1f5}{00073}}   \} set;}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00075}00075 \} \mbox{\hyperlink{unionserial__interrupts}{serial\_interrupts}};}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00077}\mbox{\hyperlink{serial_8h_a2e0f91ff642506f81cf80f874bd66beb}{00077}} \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00078}\mbox{\hyperlink{serial_8h_a2e0f91ff642506f81cf80f874bd66beba4bffe960d7eae89d5b85412e4edfd453}{00078}}   \mbox{\hyperlink{serial_8h_a2e0f91ff642506f81cf80f874bd66beba4bffe960d7eae89d5b85412e4edfd453}{NO\_PARITY}},}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00079}\mbox{\hyperlink{serial_8h_a2e0f91ff642506f81cf80f874bd66bebafe2fed5b602e75007ad71639144b174b}{00079}}   \mbox{\hyperlink{serial_8h_a2e0f91ff642506f81cf80f874bd66bebafe2fed5b602e75007ad71639144b174b}{ODD\_PARITY}},}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00080}\mbox{\hyperlink{serial_8h_a2e0f91ff642506f81cf80f874bd66bebae19a2b096e346d54f83b83723a8af70d}{00080}}   \mbox{\hyperlink{serial_8h_a2e0f91ff642506f81cf80f874bd66bebae19a2b096e346d54f83b83723a8af70d}{EVEN\_PARITY}},}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00081}\mbox{\hyperlink{serial_8h_a2e0f91ff642506f81cf80f874bd66bebab2a979177fd509f5398ec69341f7058f}{00081}}   \mbox{\hyperlink{serial_8h_a2e0f91ff642506f81cf80f874bd66bebab2a979177fd509f5398ec69341f7058f}{MARK}},}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00082}00082   \mbox{\hyperlink{serial_8h_a2e0f91ff642506f81cf80f874bd66bebac08dae7edcb5c5bb959fee5971fbad95}{SPACE}}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00083}\mbox{\hyperlink{serial_8h_a2e0f91ff642506f81cf80f874bd66bebac08dae7edcb5c5bb959fee5971fbad95}{00083}} \} \mbox{\hyperlink{serial_8h_a2e0f91ff642506f81cf80f874bd66beb}{serial\_parity}};}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00085}\mbox{\hyperlink{serial_8h_a75b2a999f188510e2a9bb58b38d0211f}{00085}} \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00086}\mbox{\hyperlink{serial_8h_a75b2a999f188510e2a9bb58b38d0211fa7a725f13af144bdef532d0389ba75e0d}{00086}}   \mbox{\hyperlink{serial_8h_a75b2a999f188510e2a9bb58b38d0211fa7a725f13af144bdef532d0389ba75e0d}{ONE}},}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00087}00087   \mbox{\hyperlink{serial_8h_a75b2a999f188510e2a9bb58b38d0211fa0e793500a63ffa575b9b712ca3bc9851}{TWO}}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00088}\mbox{\hyperlink{serial_8h_a75b2a999f188510e2a9bb58b38d0211fa0e793500a63ffa575b9b712ca3bc9851}{00088}} \} \mbox{\hyperlink{serial_8h_a75b2a999f188510e2a9bb58b38d0211f}{serial\_stop\_bits}};}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00090}\mbox{\hyperlink{serial_8h_a5669d8fa035d8f41ab9b4a38fc295e42}{00090}} \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00091}\mbox{\hyperlink{serial_8h_a5669d8fa035d8f41ab9b4a38fc295e42a3a40d11d30db182ab8f9846aa9458bec}{00091}}   \mbox{\hyperlink{serial_8h_a5669d8fa035d8f41ab9b4a38fc295e42a3a40d11d30db182ab8f9846aa9458bec}{FIVE}},}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00092}\mbox{\hyperlink{serial_8h_a5669d8fa035d8f41ab9b4a38fc295e42aadffddd32c3e7497e32cd7e430c9c106}{00092}}   \mbox{\hyperlink{serial_8h_a5669d8fa035d8f41ab9b4a38fc295e42aadffddd32c3e7497e32cd7e430c9c106}{SIX}},}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00093}\mbox{\hyperlink{serial_8h_a5669d8fa035d8f41ab9b4a38fc295e42a9a193f3e84352f3fbbe44f8d275a820c}{00093}}   \mbox{\hyperlink{serial_8h_a5669d8fa035d8f41ab9b4a38fc295e42a9a193f3e84352f3fbbe44f8d275a820c}{SEVEN}},}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00094}00094   \mbox{\hyperlink{serial_8h_a5669d8fa035d8f41ab9b4a38fc295e42a2fd39b67b424f4ea3b4c11ce3195ab8b}{EIGHT}}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00095}\mbox{\hyperlink{serial_8h_a5669d8fa035d8f41ab9b4a38fc295e42a2fd39b67b424f4ea3b4c11ce3195ab8b}{00095}} \} \mbox{\hyperlink{serial_8h_a5669d8fa035d8f41ab9b4a38fc295e42}{serial\_word\_length}};}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00097}\mbox{\hyperlink{serial_8h_a498386139dfdc03f0a73f5261590ec3a}{00097}} \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00098}\mbox{\hyperlink{serial_8h_a498386139dfdc03f0a73f5261590ec3aacc6ddcaa36bd57e5aec12749cb5ce29c}{00098}}   \mbox{\hyperlink{serial_8h_a498386139dfdc03f0a73f5261590ec3aacc6ddcaa36bd57e5aec12749cb5ce29c}{HANDSHAKE}},}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00099}\mbox{\hyperlink{serial_8h_a498386139dfdc03f0a73f5261590ec3aa41246e9c8691b7e33bc79b345e06b48e}{00099}}   \mbox{\hyperlink{serial_8h_a498386139dfdc03f0a73f5261590ec3aa41246e9c8691b7e33bc79b345e06b48e}{ACK}},}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00100}\mbox{\hyperlink{serial_8h_a498386139dfdc03f0a73f5261590ec3aa4ad40322037d6d371dca3e5cf993f5dc}{00100}}   \mbox{\hyperlink{serial_8h_a498386139dfdc03f0a73f5261590ec3aa4ad40322037d6d371dca3e5cf993f5dc}{WORD}},}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00101}00101   \mbox{\hyperlink{serial_8h_a498386139dfdc03f0a73f5261590ec3aa3b07fb0b7f97231274708718383b086d}{SUBMISSION}}}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00102}\mbox{\hyperlink{serial_8h_a498386139dfdc03f0a73f5261590ec3aa3b07fb0b7f97231274708718383b086d}{00102}} \} \mbox{\hyperlink{serial_8h_a498386139dfdc03f0a73f5261590ec3a}{serial\_packet\_type}};}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00103}\mbox{\hyperlink{structserial__packet}{00103}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00104}\mbox{\hyperlink{structserial__packet_a386ee09b697f8b2e5e588b4b6a961241}{00104}}   \mbox{\hyperlink{serial_8h_a498386139dfdc03f0a73f5261590ec3a}{serial\_packet\_type}} \mbox{\hyperlink{structserial__packet_a386ee09b697f8b2e5e588b4b6a961241}{type}};}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00105}\mbox{\hyperlink{structserial__packet_a9ca90e18b8df2c9d98456c0557c1f14d}{00105}}   uint8\_t content[\mbox{\hyperlink{serial_8h_a2e64679e800ee28d22c48edbf87b78c1}{SERIAL\_PACKET\_SIZE}} -\/ 1];}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00106}00106 \} \mbox{\hyperlink{structserial__packet}{serial\_packet}};}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00113}\mbox{\hyperlink{serial_8h_a11e43c6ff4c5eca799e31f58b7a6de68}{00113}} int (\mbox{\hyperlink{serial_8h_a11e43c6ff4c5eca799e31f58b7a6de68}{serial\_init}})();}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00120}\mbox{\hyperlink{serial_8h_a79b843cc2c1c7137f16843c4149d88b7}{00120}} int (\mbox{\hyperlink{serial_8h_a79b843cc2c1c7137f16843c4149d88b7}{serial\_cleanup}})();}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00126}\mbox{\hyperlink{serial_8h_a2d501fe0a1d94698ad59d93e1145edd3}{00126}} int (\mbox{\hyperlink{serial_8h_a2d501fe0a1d94698ad59d93e1145edd3}{serial\_set\_baudrate}})();}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00133}\mbox{\hyperlink{serial_8h_a87f4a7902fd921ce306a9f36d12e71c2}{00133}} int (\mbox{\hyperlink{serial_8h_a87f4a7902fd921ce306a9f36d12e71c2}{serial\_subscribe\_interrupts}})();}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00134}00134 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00140}\mbox{\hyperlink{serial_8h_a97804bc6d69d3be4fd27086e9f0d7493}{00140}} int (\mbox{\hyperlink{serial_8h_a97804bc6d69d3be4fd27086e9f0d7493}{serial\_unsubscribe\_interrupts}})();}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00141}00141 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00146}\mbox{\hyperlink{serial_8h_a8da0de2aff9f84326537bd49d6a18a59}{00146}} void (\mbox{\hyperlink{serial_8h_a8da0de2aff9f84326537bd49d6a18a59}{serial\_handle\_interrupt}})(\textcolor{keyword}{struct }\mbox{\hyperlink{structevent}{event}} *ev);}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00147}00147 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00154}\mbox{\hyperlink{serial_8h_a69ff4094475fa520b23220ea61f28031}{00154}} int (\mbox{\hyperlink{serial_8h_a69ff4094475fa520b23220ea61f28031}{serial\_get\_interrupts}})(\mbox{\hyperlink{unionserial__interrupts}{serial\_interrupts}} *interrupts);}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00155}00155 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00162}\mbox{\hyperlink{serial_8h_a59d37057902766d828b43ec9b9512142}{00162}} int (\mbox{\hyperlink{serial_8h_a59d37057902766d828b43ec9b9512142}{serial\_set\_interrupts}})(\textcolor{keyword}{const} \mbox{\hyperlink{unionserial__interrupts}{serial\_interrupts}} *interrupts);}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00163}00163 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00172}\mbox{\hyperlink{serial_8h_aa1ed82926341894b76154eb889775cac}{00172}} int (\mbox{\hyperlink{serial_8h_aa1ed82926341894b76154eb889775cac}{serial\_set\_line\_pattern}})(\mbox{\hyperlink{serial_8h_a2e0f91ff642506f81cf80f874bd66beb}{serial\_parity}} parity, \mbox{\hyperlink{serial_8h_a75b2a999f188510e2a9bb58b38d0211f}{serial\_stop\_bits}} stop\_bits, \mbox{\hyperlink{serial_8h_a5669d8fa035d8f41ab9b4a38fc295e42}{serial\_word\_length}} word\_length);}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00173}00173 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00174}\mbox{\hyperlink{serial_8h_abbdc313ec41c556efbe1e114abcf125b}{00174}} int (\mbox{\hyperlink{serial_8h_abbdc313ec41c556efbe1e114abcf125b}{serial\_enable\_fifo}})();}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00175}00175 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00180}\mbox{\hyperlink{serial_8h_a1e2b61a22eb20de115ef4260f335f117}{00180}} void (\mbox{\hyperlink{serial_8h_a1e2b61a22eb20de115ef4260f335f117}{serial\_handle\_line\_status}})();}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00181}00181 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00186}\mbox{\hyperlink{serial_8h_add885c5bfeaa721c610568363dc96d54}{00186}} void (\mbox{\hyperlink{serial_8h_add885c5bfeaa721c610568363dc96d54}{serial\_handle\_received\_data}})();}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00187}00187 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00192}\mbox{\hyperlink{serial_8h_a948e0c11cd951e5e4953ac7c85526158}{00192}} void (\mbox{\hyperlink{serial_8h_a948e0c11cd951e5e4953ac7c85526158}{serial\_handle\_transmitter\_holding\_register\_empty}})();}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00193}00193 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00199}\mbox{\hyperlink{serial_8h_adfb5d62890076278cfff77af6a7bf614}{00199}} void (\mbox{\hyperlink{serial_8h_adfb5d62890076278cfff77af6a7bf614}{serial\_send\_byte}})(uint8\_t byte);}
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00200}00200 }
+\DoxyCodeLine{\Hypertarget{serial_8h_source_l00206}\mbox{\hyperlink{serial_8h_a6ae308af73ade82998c821e16e4cd5da}{00206}} void (\mbox{\hyperlink{serial_8h_a6ae308af73ade82998c821e16e4cd5da}{serial\_send\_packet}})(\mbox{\hyperlink{structserial__packet}{serial\_packet}} *packet);}
+
+\end{DoxyCode}

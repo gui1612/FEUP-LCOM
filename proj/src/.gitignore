@@ -1,0 +1,7 @@
+*.o
+.gdbinit
+proj
+output.txt
+trace.txt
+
+.vscode

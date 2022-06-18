@@ -1,0 +1,114 @@
+\hypertarget{unionserial__interrupts}{}\doxysection{serial\+\_\+interrupts Union Reference}
+\label{unionserial__interrupts}\index{serial\_interrupts@{serial\_interrupts}}
+
+
+{\ttfamily \#include $<$serial.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>bool \mbox{\hyperlink{unionserial__interrupts_aeb186ee56b64554aba2f021670208468}{interrupt\_pending}}\\
+\>\mbox{\hyperlink{serial_8h_a5a3961a2b4167b66506c77b966c94b06}{serial\_interrupt}} \mbox{\hyperlink{unionserial__interrupts_a37afd930bddf0482ceeacaaa06241edd}{interrupt}}\\
+\} \mbox{\hyperlink{unionserial__interrupts_a9458142cc3f11c52c99f6e2ed4d6e6f4}{get}}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>bool \mbox{\hyperlink{unionserial__interrupts_a3862f6060f66db63148c9f2d540b1045}{modem\_status}}\\
+\>bool \mbox{\hyperlink{unionserial__interrupts_a6e3ada96622ab36903b9f1376216d5bd}{transmitter\_holding\_register\_empty}}\\
+\>bool \mbox{\hyperlink{unionserial__interrupts_a7cfb9892ea2646a48a09f3cc6b667f12}{received\_data\_available}}\\
+\>bool \mbox{\hyperlink{unionserial__interrupts_a69e6a6d49a53fa283d16ddf20bd80938}{receiver\_line\_status}}\\
+\} \mbox{\hyperlink{unionserial__interrupts_ae111966464f7dd839071bafdb39bc1f5}{set}}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{serial_8h_source_l00057}{57}} of file \mbox{\hyperlink{serial_8h_source}{serial.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{unionserial__interrupts_a9458142cc3f11c52c99f6e2ed4d6e6f4}\label{unionserial__interrupts_a9458142cc3f11c52c99f6e2ed4d6e6f4}} 
+\index{serial\_interrupts@{serial\_interrupts}!get@{get}}
+\index{get@{get}!serial\_interrupts@{serial\_interrupts}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily struct  \{ ... \}  serial\+\_\+interrupts\+::get}
+
+\mbox{\Hypertarget{unionserial__interrupts_a37afd930bddf0482ceeacaaa06241edd}\label{unionserial__interrupts_a37afd930bddf0482ceeacaaa06241edd}} 
+\index{serial\_interrupts@{serial\_interrupts}!interrupt@{interrupt}}
+\index{interrupt@{interrupt}!serial\_interrupts@{serial\_interrupts}}
+\doxysubsubsection{\texorpdfstring{interrupt}{interrupt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{serial_8h_a5a3961a2b4167b66506c77b966c94b06}{serial\+\_\+interrupt}} serial\+\_\+interrupts\+::interrupt}
+
+
+
+Definition at line \mbox{\hyperlink{serial_8h_source_l00062}{62}} of file \mbox{\hyperlink{serial_8h_source}{serial.\+h}}.
+
+\mbox{\Hypertarget{unionserial__interrupts_aeb186ee56b64554aba2f021670208468}\label{unionserial__interrupts_aeb186ee56b64554aba2f021670208468}} 
+\index{serial\_interrupts@{serial\_interrupts}!interrupt\_pending@{interrupt\_pending}}
+\index{interrupt\_pending@{interrupt\_pending}!serial\_interrupts@{serial\_interrupts}}
+\doxysubsubsection{\texorpdfstring{interrupt\_pending}{interrupt\_pending}}
+{\footnotesize\ttfamily bool serial\+\_\+interrupts\+::interrupt\+\_\+pending}
+
+
+
+Definition at line \mbox{\hyperlink{serial_8h_source_l00061}{61}} of file \mbox{\hyperlink{serial_8h_source}{serial.\+h}}.
+
+\mbox{\Hypertarget{unionserial__interrupts_a3862f6060f66db63148c9f2d540b1045}\label{unionserial__interrupts_a3862f6060f66db63148c9f2d540b1045}} 
+\index{serial\_interrupts@{serial\_interrupts}!modem\_status@{modem\_status}}
+\index{modem\_status@{modem\_status}!serial\_interrupts@{serial\_interrupts}}
+\doxysubsubsection{\texorpdfstring{modem\_status}{modem\_status}}
+{\footnotesize\ttfamily bool serial\+\_\+interrupts\+::modem\+\_\+status}
+
+
+
+Definition at line \mbox{\hyperlink{serial_8h_source_l00068}{68}} of file \mbox{\hyperlink{serial_8h_source}{serial.\+h}}.
+
+\mbox{\Hypertarget{unionserial__interrupts_a7cfb9892ea2646a48a09f3cc6b667f12}\label{unionserial__interrupts_a7cfb9892ea2646a48a09f3cc6b667f12}} 
+\index{serial\_interrupts@{serial\_interrupts}!received\_data\_available@{received\_data\_available}}
+\index{received\_data\_available@{received\_data\_available}!serial\_interrupts@{serial\_interrupts}}
+\doxysubsubsection{\texorpdfstring{received\_data\_available}{received\_data\_available}}
+{\footnotesize\ttfamily bool serial\+\_\+interrupts\+::received\+\_\+data\+\_\+available}
+
+
+
+Definition at line \mbox{\hyperlink{serial_8h_source_l00070}{70}} of file \mbox{\hyperlink{serial_8h_source}{serial.\+h}}.
+
+\mbox{\Hypertarget{unionserial__interrupts_a69e6a6d49a53fa283d16ddf20bd80938}\label{unionserial__interrupts_a69e6a6d49a53fa283d16ddf20bd80938}} 
+\index{serial\_interrupts@{serial\_interrupts}!receiver\_line\_status@{receiver\_line\_status}}
+\index{receiver\_line\_status@{receiver\_line\_status}!serial\_interrupts@{serial\_interrupts}}
+\doxysubsubsection{\texorpdfstring{receiver\_line\_status}{receiver\_line\_status}}
+{\footnotesize\ttfamily bool serial\+\_\+interrupts\+::receiver\+\_\+line\+\_\+status}
+
+
+
+Definition at line \mbox{\hyperlink{serial_8h_source_l00071}{71}} of file \mbox{\hyperlink{serial_8h_source}{serial.\+h}}.
+
+\mbox{\Hypertarget{unionserial__interrupts_ae111966464f7dd839071bafdb39bc1f5}\label{unionserial__interrupts_ae111966464f7dd839071bafdb39bc1f5}} 
+\index{serial\_interrupts@{serial\_interrupts}!set@{set}}
+\index{set@{set}!serial\_interrupts@{serial\_interrupts}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily struct  \{ ... \}  serial\+\_\+interrupts\+::set}
+
+\mbox{\Hypertarget{unionserial__interrupts_a6e3ada96622ab36903b9f1376216d5bd}\label{unionserial__interrupts_a6e3ada96622ab36903b9f1376216d5bd}} 
+\index{serial\_interrupts@{serial\_interrupts}!transmitter\_holding\_register\_empty@{transmitter\_holding\_register\_empty}}
+\index{transmitter\_holding\_register\_empty@{transmitter\_holding\_register\_empty}!serial\_interrupts@{serial\_interrupts}}
+\doxysubsubsection{\texorpdfstring{transmitter\_holding\_register\_empty}{transmitter\_holding\_register\_empty}}
+{\footnotesize\ttfamily bool serial\+\_\+interrupts\+::transmitter\+\_\+holding\+\_\+register\+\_\+empty}
+
+
+
+Definition at line \mbox{\hyperlink{serial_8h_source_l00069}{69}} of file \mbox{\hyperlink{serial_8h_source}{serial.\+h}}.
+
+
+
+The documentation for this union was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/devices/\mbox{\hyperlink{serial_8h}{serial.\+h}}\end{DoxyCompactItemize}

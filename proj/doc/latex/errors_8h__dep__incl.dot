@@ -1,0 +1,46 @@
+digraph "include/errors.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="include/errors.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="include/devices/kbc.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$kbc_8h.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="include/devices/keyboard.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$keyboard_8h.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="include/devices/mouse.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mouse_8h.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="include/devices/serial.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$serial_8h.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="include/devices/timer.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$timer_8h.html",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="include/devices/vbe.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vbe_8h.html",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="include/game/controller\l/game.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$controller_2game_8h.html",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="include/game/controller\l/local_player.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$controller_2local__player_8h.html",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="include/game/model\l/cell_background.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$cell__background_8h.html",tooltip=" "];
+  Node10 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="include/game/model\l/local_player.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$model_2local__player_8h.html",tooltip=" "];
+  Node11 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="include/graphics/graphics.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$graphics_8h.html",tooltip=" "];
+  Node10 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="include/multiplayer\l/model/remote_player.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$model_2remote__player_8h.html",tooltip=" "];
+  Node10 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="include/protocol/protocol.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$protocol_8h.html",tooltip=" "];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="include/game/state.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$game_2state_8h.html",tooltip=" "];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="include/scheduler/scheduler.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$scheduler_8h.html",tooltip=" "];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="include/state/state.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$state_2state_8h.html",tooltip=" "];
+  Node1 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="include/vector/vector.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vector_8h.html",tooltip=" "];
+  Node18 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

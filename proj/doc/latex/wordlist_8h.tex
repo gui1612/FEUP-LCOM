@@ -1,0 +1,67 @@
+\hypertarget{wordlist_8h}{}\doxysection{include/game/wordlist.h File Reference}
+\label{wordlist_8h}\index{include/game/wordlist.h@{include/game/wordlist.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+Include dependency graph for wordlist.\+h\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{wordlist_8h_a3fc2c3850f7042b627e107ef48081fbb}{game\+\_\+wordlist\+\_\+init}} (char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Initializes the wordlist file. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{wordlist_8h_a73cb48e1df3fc5bd844700a62f2ed980}{game\+\_\+wordlist\+\_\+cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Closes the wordlist file. \end{DoxyCompactList}\item 
+bool() \mbox{\hyperlink{wordlist_8h_ae267f528ca061c0d0ffa0b47a0d2da1d}{game\+\_\+wordlist\+\_\+contains}} (char $\ast$word)
+\begin{DoxyCompactList}\small\item\em Searches the wordlist for a target word. \end{DoxyCompactList}\item 
+char $\ast$() \mbox{\hyperlink{wordlist_8h_a2b9ddb7d7e1446aa17bebc80f8b24e05}{game\+\_\+wordlist\+\_\+select\+\_\+random}} ()
+\begin{DoxyCompactList}\small\item\em Selects a random word from the wordlist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{wordlist_8h_a73cb48e1df3fc5bd844700a62f2ed980}\label{wordlist_8h_a73cb48e1df3fc5bd844700a62f2ed980}} 
+\index{wordlist.h@{wordlist.h}!game\_wordlist\_cleanup@{game\_wordlist\_cleanup}}
+\index{game\_wordlist\_cleanup@{game\_wordlist\_cleanup}!wordlist.h@{wordlist.h}}
+\doxysubsubsection{\texorpdfstring{game\_wordlist\_cleanup()}{game\_wordlist\_cleanup()}}
+{\footnotesize\ttfamily int() game\+\_\+wordlist\+\_\+cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Closes the wordlist file. 
+
+\mbox{\Hypertarget{wordlist_8h_ae267f528ca061c0d0ffa0b47a0d2da1d}\label{wordlist_8h_ae267f528ca061c0d0ffa0b47a0d2da1d}} 
+\index{wordlist.h@{wordlist.h}!game\_wordlist\_contains@{game\_wordlist\_contains}}
+\index{game\_wordlist\_contains@{game\_wordlist\_contains}!wordlist.h@{wordlist.h}}
+\doxysubsubsection{\texorpdfstring{game\_wordlist\_contains()}{game\_wordlist\_contains()}}
+{\footnotesize\ttfamily bool() game\+\_\+wordlist\+\_\+contains (\begin{DoxyParamCaption}\item[{char $\ast$}]{word }\end{DoxyParamCaption})}
+
+
+
+Searches the wordlist for a target word. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em word} & The word to look for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the word is in the list, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{wordlist_8h_a3fc2c3850f7042b627e107ef48081fbb}\label{wordlist_8h_a3fc2c3850f7042b627e107ef48081fbb}} 
+\index{wordlist.h@{wordlist.h}!game\_wordlist\_init@{game\_wordlist\_init}}
+\index{game\_wordlist\_init@{game\_wordlist\_init}!wordlist.h@{wordlist.h}}
+\doxysubsubsection{\texorpdfstring{game\_wordlist\_init()}{game\_wordlist\_init()}}
+{\footnotesize\ttfamily int() game\+\_\+wordlist\+\_\+init (\begin{DoxyParamCaption}\item[{char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Initializes the wordlist file. 
+
+\mbox{\Hypertarget{wordlist_8h_a2b9ddb7d7e1446aa17bebc80f8b24e05}\label{wordlist_8h_a2b9ddb7d7e1446aa17bebc80f8b24e05}} 
+\index{wordlist.h@{wordlist.h}!game\_wordlist\_select\_random@{game\_wordlist\_select\_random}}
+\index{game\_wordlist\_select\_random@{game\_wordlist\_select\_random}!wordlist.h@{wordlist.h}}
+\doxysubsubsection{\texorpdfstring{game\_wordlist\_select\_random()}{game\_wordlist\_select\_random()}}
+{\footnotesize\ttfamily char $\ast$() game\+\_\+wordlist\+\_\+select\+\_\+random (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Selects a random word from the wordlist. 
+

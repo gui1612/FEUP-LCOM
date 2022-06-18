@@ -1,0 +1,49 @@
+\hypertarget{keyboard_8h_source}{}\doxysection{keyboard.\+h}
+\label{keyboard_8h_source}\index{include/devices/keyboard.h@{include/devices/keyboard.h}}
+\mbox{\hyperlink{keyboard_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00004}00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{errors_8h}{errors.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{events_8h}{events/events.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00008}\mbox{\hyperlink{keyboard_8h_a5c1072213ce8d8cd43628c4319ae0391}{00008}} \textcolor{preprocessor}{\#define KBD\_IRQ 1}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00009}\mbox{\hyperlink{keyboard_8h_a8996fff1a303ed79d352f0f976c7fb17}{00009}} \textcolor{preprocessor}{\#define KBD\_LONG\_CODE (0xE0)}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00010}\mbox{\hyperlink{keyboard_8h_a3d2f379e7e5e3f16d6b6894a7a37965a}{00010}} \textcolor{preprocessor}{\#define KBD\_BREAK\_CODE (0x80)}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00012}00012 \textcolor{comment}{// keyboard make codes used for character mapping}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00013}\mbox{\hyperlink{keyboard_8h_a4af1b6159e447ba72652bb7fcdfa726e}{00013}} \textcolor{preprocessor}{\#define ESC (0x01)}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00014}\mbox{\hyperlink{keyboard_8h_ac328e551bde3d39b6d7b8cc9e048d941}{00014}} \textcolor{preprocessor}{\#define ZERO (0x0B)}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00015}\mbox{\hyperlink{keyboard_8h_a629568514359445d2fbda71d70eeb1ce}{00015}} \textcolor{preprocessor}{\#define BACKSPACE (0x0E)}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00016}\mbox{\hyperlink{keyboard_8h_acbcee443d6d55cb8600b3f240f5cf907}{00016}} \textcolor{preprocessor}{\#define Q (0x10)}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00017}\mbox{\hyperlink{keyboard_8h_a2748566f4c443ee77aa831e63dbb5ebe}{00017}} \textcolor{preprocessor}{\#define P (0x19)}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00018}\mbox{\hyperlink{keyboard_8h_af4bced5cf8ed55746d4b5d34f9a0fe39}{00018}} \textcolor{preprocessor}{\#define ENTER (0x1C)}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00019}\mbox{\hyperlink{keyboard_8h_a955f504eccf76b4eb2489c0adab03121}{00019}} \textcolor{preprocessor}{\#define A (0x1E)}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00020}\mbox{\hyperlink{keyboard_8h_aa73214aa5f2f94f63d90bb4e3d99fe53}{00020}} \textcolor{preprocessor}{\#define L (0x26)}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00021}\mbox{\hyperlink{keyboard_8h_a51591cf51bdd6c1f6015532422e7770e}{00021}} \textcolor{preprocessor}{\#define Z (0x2C)}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00022}\mbox{\hyperlink{keyboard_8h_a8a5043e7ab655e37e903ffbd8b95d6b2}{00022}} \textcolor{preprocessor}{\#define DOT (0x34)}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00023}\mbox{\hyperlink{keyboard_8h_a550d2dd0b770459eac129058fc677517}{00023}} \textcolor{preprocessor}{\#define NUM\_SEVEN (0x47)}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00024}\mbox{\hyperlink{keyboard_8h_a53870b522ae2209c0040df1b8727ee65}{00024}} \textcolor{preprocessor}{\#define NUM\_NINE (0x49)}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00025}\mbox{\hyperlink{keyboard_8h_a038206eed85731ce5fdd32fecce608b1}{00025}} \textcolor{preprocessor}{\#define NUM\_FOUR (0x4B)}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00026}\mbox{\hyperlink{keyboard_8h_ac33eb8522159dbd70a281be3484da8c7}{00026}} \textcolor{preprocessor}{\#define NUM\_SIX (0x4D)}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00027}\mbox{\hyperlink{keyboard_8h_a23edebf6ae1505741ebb6e201033048f}{00027}} \textcolor{preprocessor}{\#define NUM\_ONE (0x4F)}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00028}\mbox{\hyperlink{keyboard_8h_ad48afdb5ae1ba84ccc5ddcc569d00799}{00028}} \textcolor{preprocessor}{\#define NUM\_DOT (0x53)}}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00035}\mbox{\hyperlink{keyboard_8h_ae65a9f3e1a8b7affd6ad5315c22e15e1}{00035}} int (\mbox{\hyperlink{keyboard_8h_ae65a9f3e1a8b7affd6ad5315c22e15e1}{kbd\_init}})();}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00042}\mbox{\hyperlink{keyboard_8h_a98b9f0b6d9e2e2073ac7a34cb8635673}{00042}} int (\mbox{\hyperlink{keyboard_8h_a98b9f0b6d9e2e2073ac7a34cb8635673}{kbd\_cleanup}})();}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00049}\mbox{\hyperlink{keyboard_8h_a0ff3bf85c6e56bb5b8f99fcdc0f89675}{00049}} int (\mbox{\hyperlink{keyboard_8h_a0ff3bf85c6e56bb5b8f99fcdc0f89675}{kbd\_subscribe\_int}})();}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00056}\mbox{\hyperlink{keyboard_8h_aee0a7b54ee426fade9c780418d110fe0}{00056}} int (\mbox{\hyperlink{keyboard_8h_aee0a7b54ee426fade9c780418d110fe0}{kbd\_unsubscribe\_int}})();}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00064}\mbox{\hyperlink{keyboard_8h_a894b67a584b6479cdf96c9588924f0db}{00064}} char (\mbox{\hyperlink{keyboard_8h_a894b67a584b6479cdf96c9588924f0db}{kbd\_map\_code\_to\_char}})(uint8\_t code);}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00070}\mbox{\hyperlink{keyboard_8h_a929ffe0d84cc69772dc9d4d0ea0b474a}{00070}} void (\mbox{\hyperlink{keyboard_8h_a929ffe0d84cc69772dc9d4d0ea0b474a}{kbd\_handle\_interrupt}})(\textcolor{keyword}{struct }\mbox{\hyperlink{structevent}{event}} *\mbox{\hyperlink{structevent}{event}});}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00076}\mbox{\hyperlink{keyboard_8h_a4175d0eb1dc39342297ecf0ebf54a9f8}{00076}} void (\mbox{\hyperlink{keyboard_8h_a4175d0eb1dc39342297ecf0ebf54a9f8}{kbd\_handle\_byte}})(uint8\_t code);}
+\DoxyCodeLine{\Hypertarget{keyboard_8h_source_l00077}00077 }
+
+\end{DoxyCode}

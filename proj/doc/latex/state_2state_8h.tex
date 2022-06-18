@@ -1,0 +1,131 @@
+\hypertarget{state_2state_8h}{}\doxysection{include/state/state.h File Reference}
+\label{state_2state_8h}\index{include/state/state.h@{include/state/state.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}errors.\+h\char`\"{}}\newline
+Include dependency graph for state.\+h\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structstate__handler}{state\+\_\+handler}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248}{state\+\_\+t}} \{ \mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248a0cb1b2c6a7db1f1084886c98909a3f36}{INIT}}
+, \mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248a4c40e60bc71a32b924ce1f08d57f9721}{MENU}}
+, \mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248ad50cf309d7568040619ed26ee6835a84}{GAME}}
+, \mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248a403778345700cbd36b5b26352b144f78}{MULTIPLAYER}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{state_2state_8h_a6e1c07b1084da336f48c4d0ac4037530}{state\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the game\textquotesingle{}s state machine. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{state_2state_8h_aa1b996ace516d2b20494837678f9c577}{state\+\_\+cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Terminates the game\textquotesingle{}s state machine. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{state_2state_8h_aebb6709ff4c71e1ae8290aa653295c20}{state\+\_\+register}} (\mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248}{state\+\_\+t}} state, void($\ast$init)(), void($\ast$cleanup)())
+\begin{DoxyCompactList}\small\item\em Registers a state to the state machine. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{state_2state_8h_a2d3d6f9c5297c581d97c8acfd08a2389}{state\+\_\+set}} (\mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248}{state\+\_\+t}} state)
+\begin{DoxyCompactList}\small\item\em Change the state of the machine. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248}{state\+\_\+t}}() \mbox{\hyperlink{state_2state_8h_a927a58c428d7d1794d39e81c392f796d}{state\+\_\+get}} ()
+\begin{DoxyCompactList}\small\item\em Get the current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248}\label{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248}} 
+\index{state.h@{state.h}!state\_t@{state\_t}}
+\index{state\_t@{state\_t}!state.h@{state.h}}
+\doxysubsubsection{\texorpdfstring{state\_t}{state\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248}{state\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INIT@{INIT}!state.h@{state.h}}\index{state.h@{state.h}!INIT@{INIT}}}\mbox{\Hypertarget{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248a0cb1b2c6a7db1f1084886c98909a3f36}\label{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248a0cb1b2c6a7db1f1084886c98909a3f36}} 
+INIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MENU@{MENU}!state.h@{state.h}}\index{state.h@{state.h}!MENU@{MENU}}}\mbox{\Hypertarget{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248a4c40e60bc71a32b924ce1f08d57f9721}\label{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248a4c40e60bc71a32b924ce1f08d57f9721}} 
+MENU&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME@{GAME}!state.h@{state.h}}\index{state.h@{state.h}!GAME@{GAME}}}\mbox{\Hypertarget{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248ad50cf309d7568040619ed26ee6835a84}\label{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248ad50cf309d7568040619ed26ee6835a84}} 
+GAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MULTIPLAYER@{MULTIPLAYER}!state.h@{state.h}}\index{state.h@{state.h}!MULTIPLAYER@{MULTIPLAYER}}}\mbox{\Hypertarget{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248a403778345700cbd36b5b26352b144f78}\label{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248a403778345700cbd36b5b26352b144f78}} 
+MULTIPLAYER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{state_2state_8h_source_l00006}{6}} of file \mbox{\hyperlink{state_2state_8h_source}{state.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{state_2state_8h_aa1b996ace516d2b20494837678f9c577}\label{state_2state_8h_aa1b996ace516d2b20494837678f9c577}} 
+\index{state.h@{state.h}!state\_cleanup@{state\_cleanup}}
+\index{state\_cleanup@{state\_cleanup}!state.h@{state.h}}
+\doxysubsubsection{\texorpdfstring{state\_cleanup()}{state\_cleanup()}}
+{\footnotesize\ttfamily int() state\+\_\+cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Terminates the game\textquotesingle{}s state machine. 
+
+\mbox{\Hypertarget{state_2state_8h_a927a58c428d7d1794d39e81c392f796d}\label{state_2state_8h_a927a58c428d7d1794d39e81c392f796d}} 
+\index{state.h@{state.h}!state\_get@{state\_get}}
+\index{state\_get@{state\_get}!state.h@{state.h}}
+\doxysubsubsection{\texorpdfstring{state\_get()}{state\_get()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248}{state\+\_\+t}}() state\+\_\+get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the current state. 
+
+\mbox{\Hypertarget{state_2state_8h_a6e1c07b1084da336f48c4d0ac4037530}\label{state_2state_8h_a6e1c07b1084da336f48c4d0ac4037530}} 
+\index{state.h@{state.h}!state\_init@{state\_init}}
+\index{state\_init@{state\_init}!state.h@{state.h}}
+\doxysubsubsection{\texorpdfstring{state\_init()}{state\_init()}}
+{\footnotesize\ttfamily int() state\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the game\textquotesingle{}s state machine. 
+
+\mbox{\Hypertarget{state_2state_8h_aebb6709ff4c71e1ae8290aa653295c20}\label{state_2state_8h_aebb6709ff4c71e1ae8290aa653295c20}} 
+\index{state.h@{state.h}!state\_register@{state\_register}}
+\index{state\_register@{state\_register}!state.h@{state.h}}
+\doxysubsubsection{\texorpdfstring{state\_register()}{state\_register()}}
+{\footnotesize\ttfamily int() state\+\_\+register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248}{state\+\_\+t}}}]{state,  }\item[{void($\ast$)()}]{init,  }\item[{void($\ast$)()}]{cleanup }\end{DoxyParamCaption})}
+
+
+
+Registers a state to the state machine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & the state to register \\
+\hline
+{\em init} & the function to execute when the state is entered \\
+\hline
+{\em cleanup} & the function to execute when the state is left \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{state_2state_8h_a2d3d6f9c5297c581d97c8acfd08a2389}\label{state_2state_8h_a2d3d6f9c5297c581d97c8acfd08a2389}} 
+\index{state.h@{state.h}!state\_set@{state\_set}}
+\index{state\_set@{state\_set}!state.h@{state.h}}
+\doxysubsubsection{\texorpdfstring{state\_set()}{state\_set()}}
+{\footnotesize\ttfamily int() state\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248}{state\+\_\+t}}}]{state }\end{DoxyParamCaption})}
+
+
+
+Change the state of the machine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & the state to transition to \\
+\hline
+\end{DoxyParams}

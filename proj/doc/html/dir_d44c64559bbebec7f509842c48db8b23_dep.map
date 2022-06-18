@@ -1,0 +1,25 @@
+<map id="include" name="include">
+<area shape="rect" id="node2" href="dir_0ae5fd04a9b991f2c376fafa197d3147.html" title="devices" alt="" coords="624,123,696,171"/>
+<area shape="rect" id="node3" href="dir_c33611b4dec78f96017d2ccf425d656a.html" title="events" alt="" coords="371,219,443,267"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000003_000004.html" title="4" alt="" coords="459,225,467,240"/>
+<area shape="rect" id="node9" href="dir_cac49a9e31bf4f7cd5ab50e2700548d0.html" title="queue" alt="" coords="624,219,696,267"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000003_000014.html" title="1" alt="" coords="664,193,672,208"/>
+<area shape="rect" id="node4" href="dir_f307a46daed1218fee22380d1eacedba.html" title="game" alt="" coords="309,123,381,171"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000005_000004.html" title="2" alt="" coords="385,191,393,206"/>
+<area shape="rect" id="node5" href="dir_c17ed8a99c2aafc6034c524ffcf900dc.html" title="graphics" alt="" coords="528,27,600,75"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000006_000005.html" title="1" alt="" coords="397,125,405,139"/>
+<area shape="rect" id="node12" href="dir_5bea8d2adb1ff9e906d5ca6eb7e29972.html" title="vector" alt="" coords="528,123,600,171"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000006_000017.html" title="1" alt="" coords="568,97,576,112"/>
+<area shape="rect" id="node6" href="dir_904d760e9ed1c7161a0da85d5b6cb77a.html" title="menu" alt="" coords="432,123,504,171"/>
+<area shape="rect" id="edge6-headlabel" href="dir_000008_000004.html" title="1" alt="" coords="435,201,443,215"/>
+<area shape="rect" id="node7" href="dir_c662be12d708fb1f538fb261da102ef9.html" title="multiplayer" alt="" coords="419,27,504,75"/>
+<area shape="rect" id="edge7-headlabel" href="dir_000012_000004.html" title="2" alt="" coords="411,193,419,208"/>
+<area shape="rect" id="edge8-headlabel" href="dir_000012_000005.html" title="2" alt="" coords="389,110,397,125"/>
+<area shape="rect" id="node8" href="dir_a8708a1af961f7c156ece11d71cb1b13.html" title="protocol" alt="" coords="323,27,395,75"/>
+<area shape="rect" id="edge9-headlabel" href="dir_000013_000004.html" title="1" alt="" coords="354,206,362,221"/>
+<area shape="rect" id="edge10-headlabel" href="dir_000013_000005.html" title="1" alt="" coords="356,98,364,113"/>
+<area shape="rect" id="node10" href="dir_c4d5192c5250eabbe8e7ab0ad97d8a96.html" title="scheduler" alt="" coords="219,27,298,75"/>
+<area shape="rect" id="node11" href="dir_9703b89299cf67a038ab695b0b3f7db6.html" title="state" alt="" coords="123,27,195,75"/>
+<area shape="rect" id="node13" href="dir_4b3275791d4d532e8d32cd2d1e918e42.html" title="xpm" alt="" coords="27,27,99,75"/>
+<area shape="rect" id="clust1" href="dir_d44c64559bbebec7f509842c48db8b23.html" alt="" coords="16,16,707,277"/>
+</map>

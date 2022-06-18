@@ -1,0 +1,349 @@
+\hypertarget{kbc_8h}{}\doxysection{include/devices/kbc.h File Reference}
+\label{kbc_8h}\index{include/devices/kbc.h@{include/devices/kbc.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}errors.\+h\char`\"{}}\newline
+Include dependency graph for kbc.\+h\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structkbc__status}{kbc\+\_\+status}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{kbc_8h_a540f36126304f438b3b14c265340f48b}{KBC\+\_\+\+DELAY\+\_\+\+US}}~20000
+\item 
+\#define \mbox{\hyperlink{kbc_8h_add3036c42bfbff7f3efc340a403df660}{KBC\+\_\+\+TIMEOUT\+\_\+\+TRIES}}~5
+\item 
+\#define \mbox{\hyperlink{kbc_8h_aab963441b4def6316c334b9061af3f99}{KBC\+\_\+\+ACK}}~0x\+FA
+\item 
+\#define \mbox{\hyperlink{kbc_8h_ad92274e194e7c305899651cb7debd626}{KBC\+\_\+\+NACK}}~0x\+FE
+\item 
+\#define \mbox{\hyperlink{kbc_8h_a76b94d7f9ffbc239f1c61e497b1cc94d}{KBC\+\_\+\+ACK\+\_\+\+ERROR}}~0x\+FC
+\item 
+\#define \mbox{\hyperlink{kbc_8h_a8ce2e2fafb8b2fca8b633b686555609e}{KBC\+\_\+\+REG\+\_\+\+STAT}}~0x64
+\item 
+\#define \mbox{\hyperlink{kbc_8h_a57dc3fa5f8be7c9df52780b73189d272}{KBC\+\_\+\+REG\+\_\+\+OUT\+\_\+\+BUF}}~0x60
+\item 
+\#define \mbox{\hyperlink{kbc_8h_afef23c97cbe970d19d641df484dd6119}{KBC\+\_\+\+REG\+\_\+\+CTRL}}~0x64
+\item 
+\#define \mbox{\hyperlink{kbc_8h_a05c1b74f899e6825bfa56366c107fdfe}{KBC\+\_\+\+REG\+\_\+\+IN\+\_\+\+BUF}}~0x60
+\item 
+\#define \mbox{\hyperlink{kbc_8h_ae60989b8ee2fd708bf9baa030cc873b5}{KBC\+\_\+\+STAT\+\_\+\+PARITY\+\_\+\+ERR}}~BIT(7)
+\item 
+\#define \mbox{\hyperlink{kbc_8h_a10db7064d311ff57ea618dcf78071161}{KBC\+\_\+\+STAT\+\_\+\+TIMEOUT\+\_\+\+ERR}}~BIT(6)
+\item 
+\#define \mbox{\hyperlink{kbc_8h_a548770ecb15f5e80bcb071e12edef545}{KBC\+\_\+\+STAT\+\_\+\+AUX}}~BIT(5)
+\item 
+\#define \mbox{\hyperlink{kbc_8h_aac0e8db0a7a9777be5159558ec36c6c9}{KBC\+\_\+\+STAT\+\_\+\+KB\+\_\+\+INH}}~BIT(4)
+\item 
+\#define \mbox{\hyperlink{kbc_8h_ab8e393ff69ad2ccb077f94bbc6f0ac81}{KBC\+\_\+\+STAT\+\_\+\+A2}}~BIT(3)
+\item 
+\#define \mbox{\hyperlink{kbc_8h_a3590f43021325cc17d3317f449cf6184}{KBC\+\_\+\+STAT\+\_\+\+SYS}}~BIT(2)
+\item 
+\#define \mbox{\hyperlink{kbc_8h_aade1c661c83e78c228beaeedb7a61971}{KBC\+\_\+\+STAT\+\_\+\+IBF}}~BIT(1)
+\item 
+\#define \mbox{\hyperlink{kbc_8h_a21ba15a6a139ee18ea6779a3a1d8e4d5}{KBC\+\_\+\+STAT\+\_\+\+OBF}}~BIT(0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{kbc_8h_af5f8680142252f63c28259815f2d8c11}{kbc\+\_\+command\+\_\+dest}} \{ \mbox{\hyperlink{kbc_8h_af5f8680142252f63c28259815f2d8c11a6abd13b0a6bf7894c7ceb5ff45ddbc14}{MOUSE}} = 0x\+D4
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{kbc_8h_a5fc61bc3727013e87ff63e764a1d4ac6}{kbc\+\_\+read\+\_\+status}} (struct \mbox{\hyperlink{structkbc__status}{kbc\+\_\+status}} $\ast$stat)
+\begin{DoxyCompactList}\small\item\em Reads KBC status. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{kbc_8h_a7987e7fdbff84d08b67398e47affc07f}{kbc\+\_\+send\+\_\+byte}} (int port, uint8\+\_\+t byte)
+\begin{DoxyCompactList}\small\item\em Sends a byte to a KBC port. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{kbc_8h_a3d993d15b65360306e429d698a95d83e}{kbc\+\_\+read\+\_\+byte}} (int port, uint8\+\_\+t $\ast$byte)
+\begin{DoxyCompactList}\small\item\em Reads a byte from a KBC port. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{kbc_8h_a9e95c5a39d4d301ae8f8264f49df0710}{kbc\+\_\+send\+\_\+command}} (enum \mbox{\hyperlink{kbc_8h_af5f8680142252f63c28259815f2d8c11}{kbc\+\_\+command\+\_\+dest}} dest, uint8\+\_\+t $\ast$bytes, size\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Sends a command to a device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{kbc_8h_af5f8680142252f63c28259815f2d8c11}{kbc\+\_\+command\+\_\+dest}} \mbox{\hyperlink{kbc_8h_a24882270a01597969f85e1b3340b7921}{kbc\+\_\+command\+\_\+dest\+\_\+t}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{kbc_8h_aab963441b4def6316c334b9061af3f99}\label{kbc_8h_aab963441b4def6316c334b9061af3f99}} 
+\index{kbc.h@{kbc.h}!KBC\_ACK@{KBC\_ACK}}
+\index{KBC\_ACK@{KBC\_ACK}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_ACK}{KBC\_ACK}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+ACK~0x\+FA}
+
+
+
+Definition at line \mbox{\hyperlink{kbc_8h_source_l00009}{9}} of file \mbox{\hyperlink{kbc_8h_source}{kbc.\+h}}.
+
+\mbox{\Hypertarget{kbc_8h_a76b94d7f9ffbc239f1c61e497b1cc94d}\label{kbc_8h_a76b94d7f9ffbc239f1c61e497b1cc94d}} 
+\index{kbc.h@{kbc.h}!KBC\_ACK\_ERROR@{KBC\_ACK\_ERROR}}
+\index{KBC\_ACK\_ERROR@{KBC\_ACK\_ERROR}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_ACK\_ERROR}{KBC\_ACK\_ERROR}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+ACK\+\_\+\+ERROR~0x\+FC}
+
+
+
+Definition at line \mbox{\hyperlink{kbc_8h_source_l00011}{11}} of file \mbox{\hyperlink{kbc_8h_source}{kbc.\+h}}.
+
+\mbox{\Hypertarget{kbc_8h_a540f36126304f438b3b14c265340f48b}\label{kbc_8h_a540f36126304f438b3b14c265340f48b}} 
+\index{kbc.h@{kbc.h}!KBC\_DELAY\_US@{KBC\_DELAY\_US}}
+\index{KBC\_DELAY\_US@{KBC\_DELAY\_US}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_DELAY\_US}{KBC\_DELAY\_US}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+DELAY\+\_\+\+US~20000}
+
+
+
+Definition at line \mbox{\hyperlink{kbc_8h_source_l00006}{6}} of file \mbox{\hyperlink{kbc_8h_source}{kbc.\+h}}.
+
+\mbox{\Hypertarget{kbc_8h_ad92274e194e7c305899651cb7debd626}\label{kbc_8h_ad92274e194e7c305899651cb7debd626}} 
+\index{kbc.h@{kbc.h}!KBC\_NACK@{KBC\_NACK}}
+\index{KBC\_NACK@{KBC\_NACK}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_NACK}{KBC\_NACK}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+NACK~0x\+FE}
+
+
+
+Definition at line \mbox{\hyperlink{kbc_8h_source_l00010}{10}} of file \mbox{\hyperlink{kbc_8h_source}{kbc.\+h}}.
+
+\mbox{\Hypertarget{kbc_8h_afef23c97cbe970d19d641df484dd6119}\label{kbc_8h_afef23c97cbe970d19d641df484dd6119}} 
+\index{kbc.h@{kbc.h}!KBC\_REG\_CTRL@{KBC\_REG\_CTRL}}
+\index{KBC\_REG\_CTRL@{KBC\_REG\_CTRL}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_REG\_CTRL}{KBC\_REG\_CTRL}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+REG\+\_\+\+CTRL~0x64}
+
+
+
+Definition at line \mbox{\hyperlink{kbc_8h_source_l00016}{16}} of file \mbox{\hyperlink{kbc_8h_source}{kbc.\+h}}.
+
+\mbox{\Hypertarget{kbc_8h_a05c1b74f899e6825bfa56366c107fdfe}\label{kbc_8h_a05c1b74f899e6825bfa56366c107fdfe}} 
+\index{kbc.h@{kbc.h}!KBC\_REG\_IN\_BUF@{KBC\_REG\_IN\_BUF}}
+\index{KBC\_REG\_IN\_BUF@{KBC\_REG\_IN\_BUF}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_REG\_IN\_BUF}{KBC\_REG\_IN\_BUF}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+REG\+\_\+\+IN\+\_\+\+BUF~0x60}
+
+
+
+Definition at line \mbox{\hyperlink{kbc_8h_source_l00017}{17}} of file \mbox{\hyperlink{kbc_8h_source}{kbc.\+h}}.
+
+\mbox{\Hypertarget{kbc_8h_a57dc3fa5f8be7c9df52780b73189d272}\label{kbc_8h_a57dc3fa5f8be7c9df52780b73189d272}} 
+\index{kbc.h@{kbc.h}!KBC\_REG\_OUT\_BUF@{KBC\_REG\_OUT\_BUF}}
+\index{KBC\_REG\_OUT\_BUF@{KBC\_REG\_OUT\_BUF}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_REG\_OUT\_BUF}{KBC\_REG\_OUT\_BUF}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+REG\+\_\+\+OUT\+\_\+\+BUF~0x60}
+
+
+
+Definition at line \mbox{\hyperlink{kbc_8h_source_l00014}{14}} of file \mbox{\hyperlink{kbc_8h_source}{kbc.\+h}}.
+
+\mbox{\Hypertarget{kbc_8h_a8ce2e2fafb8b2fca8b633b686555609e}\label{kbc_8h_a8ce2e2fafb8b2fca8b633b686555609e}} 
+\index{kbc.h@{kbc.h}!KBC\_REG\_STAT@{KBC\_REG\_STAT}}
+\index{KBC\_REG\_STAT@{KBC\_REG\_STAT}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_REG\_STAT}{KBC\_REG\_STAT}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+REG\+\_\+\+STAT~0x64}
+
+
+
+Definition at line \mbox{\hyperlink{kbc_8h_source_l00013}{13}} of file \mbox{\hyperlink{kbc_8h_source}{kbc.\+h}}.
+
+\mbox{\Hypertarget{kbc_8h_ab8e393ff69ad2ccb077f94bbc6f0ac81}\label{kbc_8h_ab8e393ff69ad2ccb077f94bbc6f0ac81}} 
+\index{kbc.h@{kbc.h}!KBC\_STAT\_A2@{KBC\_STAT\_A2}}
+\index{KBC\_STAT\_A2@{KBC\_STAT\_A2}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_STAT\_A2}{KBC\_STAT\_A2}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+STAT\+\_\+\+A2~BIT(3)}
+
+
+
+Definition at line \mbox{\hyperlink{kbc_8h_source_l00023}{23}} of file \mbox{\hyperlink{kbc_8h_source}{kbc.\+h}}.
+
+\mbox{\Hypertarget{kbc_8h_a548770ecb15f5e80bcb071e12edef545}\label{kbc_8h_a548770ecb15f5e80bcb071e12edef545}} 
+\index{kbc.h@{kbc.h}!KBC\_STAT\_AUX@{KBC\_STAT\_AUX}}
+\index{KBC\_STAT\_AUX@{KBC\_STAT\_AUX}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_STAT\_AUX}{KBC\_STAT\_AUX}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+STAT\+\_\+\+AUX~BIT(5)}
+
+
+
+Definition at line \mbox{\hyperlink{kbc_8h_source_l00021}{21}} of file \mbox{\hyperlink{kbc_8h_source}{kbc.\+h}}.
+
+\mbox{\Hypertarget{kbc_8h_aade1c661c83e78c228beaeedb7a61971}\label{kbc_8h_aade1c661c83e78c228beaeedb7a61971}} 
+\index{kbc.h@{kbc.h}!KBC\_STAT\_IBF@{KBC\_STAT\_IBF}}
+\index{KBC\_STAT\_IBF@{KBC\_STAT\_IBF}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_STAT\_IBF}{KBC\_STAT\_IBF}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+STAT\+\_\+\+IBF~BIT(1)}
+
+
+
+Definition at line \mbox{\hyperlink{kbc_8h_source_l00025}{25}} of file \mbox{\hyperlink{kbc_8h_source}{kbc.\+h}}.
+
+\mbox{\Hypertarget{kbc_8h_aac0e8db0a7a9777be5159558ec36c6c9}\label{kbc_8h_aac0e8db0a7a9777be5159558ec36c6c9}} 
+\index{kbc.h@{kbc.h}!KBC\_STAT\_KB\_INH@{KBC\_STAT\_KB\_INH}}
+\index{KBC\_STAT\_KB\_INH@{KBC\_STAT\_KB\_INH}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_STAT\_KB\_INH}{KBC\_STAT\_KB\_INH}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+STAT\+\_\+\+KB\+\_\+\+INH~BIT(4)}
+
+
+
+Definition at line \mbox{\hyperlink{kbc_8h_source_l00022}{22}} of file \mbox{\hyperlink{kbc_8h_source}{kbc.\+h}}.
+
+\mbox{\Hypertarget{kbc_8h_a21ba15a6a139ee18ea6779a3a1d8e4d5}\label{kbc_8h_a21ba15a6a139ee18ea6779a3a1d8e4d5}} 
+\index{kbc.h@{kbc.h}!KBC\_STAT\_OBF@{KBC\_STAT\_OBF}}
+\index{KBC\_STAT\_OBF@{KBC\_STAT\_OBF}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_STAT\_OBF}{KBC\_STAT\_OBF}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+STAT\+\_\+\+OBF~BIT(0)}
+
+
+
+Definition at line \mbox{\hyperlink{kbc_8h_source_l00026}{26}} of file \mbox{\hyperlink{kbc_8h_source}{kbc.\+h}}.
+
+\mbox{\Hypertarget{kbc_8h_ae60989b8ee2fd708bf9baa030cc873b5}\label{kbc_8h_ae60989b8ee2fd708bf9baa030cc873b5}} 
+\index{kbc.h@{kbc.h}!KBC\_STAT\_PARITY\_ERR@{KBC\_STAT\_PARITY\_ERR}}
+\index{KBC\_STAT\_PARITY\_ERR@{KBC\_STAT\_PARITY\_ERR}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_STAT\_PARITY\_ERR}{KBC\_STAT\_PARITY\_ERR}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+STAT\+\_\+\+PARITY\+\_\+\+ERR~BIT(7)}
+
+
+
+Definition at line \mbox{\hyperlink{kbc_8h_source_l00019}{19}} of file \mbox{\hyperlink{kbc_8h_source}{kbc.\+h}}.
+
+\mbox{\Hypertarget{kbc_8h_a3590f43021325cc17d3317f449cf6184}\label{kbc_8h_a3590f43021325cc17d3317f449cf6184}} 
+\index{kbc.h@{kbc.h}!KBC\_STAT\_SYS@{KBC\_STAT\_SYS}}
+\index{KBC\_STAT\_SYS@{KBC\_STAT\_SYS}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_STAT\_SYS}{KBC\_STAT\_SYS}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+STAT\+\_\+\+SYS~BIT(2)}
+
+
+
+Definition at line \mbox{\hyperlink{kbc_8h_source_l00024}{24}} of file \mbox{\hyperlink{kbc_8h_source}{kbc.\+h}}.
+
+\mbox{\Hypertarget{kbc_8h_a10db7064d311ff57ea618dcf78071161}\label{kbc_8h_a10db7064d311ff57ea618dcf78071161}} 
+\index{kbc.h@{kbc.h}!KBC\_STAT\_TIMEOUT\_ERR@{KBC\_STAT\_TIMEOUT\_ERR}}
+\index{KBC\_STAT\_TIMEOUT\_ERR@{KBC\_STAT\_TIMEOUT\_ERR}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_STAT\_TIMEOUT\_ERR}{KBC\_STAT\_TIMEOUT\_ERR}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+STAT\+\_\+\+TIMEOUT\+\_\+\+ERR~BIT(6)}
+
+
+
+Definition at line \mbox{\hyperlink{kbc_8h_source_l00020}{20}} of file \mbox{\hyperlink{kbc_8h_source}{kbc.\+h}}.
+
+\mbox{\Hypertarget{kbc_8h_add3036c42bfbff7f3efc340a403df660}\label{kbc_8h_add3036c42bfbff7f3efc340a403df660}} 
+\index{kbc.h@{kbc.h}!KBC\_TIMEOUT\_TRIES@{KBC\_TIMEOUT\_TRIES}}
+\index{KBC\_TIMEOUT\_TRIES@{KBC\_TIMEOUT\_TRIES}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_TIMEOUT\_TRIES}{KBC\_TIMEOUT\_TRIES}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+TIMEOUT\+\_\+\+TRIES~5}
+
+
+
+Definition at line \mbox{\hyperlink{kbc_8h_source_l00007}{7}} of file \mbox{\hyperlink{kbc_8h_source}{kbc.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{kbc_8h_af5f8680142252f63c28259815f2d8c11}\label{kbc_8h_af5f8680142252f63c28259815f2d8c11}} 
+\index{kbc.h@{kbc.h}!kbc\_command\_dest@{kbc\_command\_dest}}
+\index{kbc\_command\_dest@{kbc\_command\_dest}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{kbc\_command\_dest}{kbc\_command\_dest}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{kbc_8h_af5f8680142252f63c28259815f2d8c11}{kbc\+\_\+command\+\_\+dest}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOUSE@{MOUSE}!kbc.h@{kbc.h}}\index{kbc.h@{kbc.h}!MOUSE@{MOUSE}}}\mbox{\Hypertarget{kbc_8h_af5f8680142252f63c28259815f2d8c11a6abd13b0a6bf7894c7ceb5ff45ddbc14}\label{kbc_8h_af5f8680142252f63c28259815f2d8c11a6abd13b0a6bf7894c7ceb5ff45ddbc14}} 
+MOUSE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{kbc_8h_source_l00028}{28}} of file \mbox{\hyperlink{kbc_8h_source}{kbc.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{kbc_8h_a3d993d15b65360306e429d698a95d83e}\label{kbc_8h_a3d993d15b65360306e429d698a95d83e}} 
+\index{kbc.h@{kbc.h}!kbc\_read\_byte@{kbc\_read\_byte}}
+\index{kbc\_read\_byte@{kbc\_read\_byte}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{kbc\_read\_byte()}{kbc\_read\_byte()}}
+{\footnotesize\ttfamily int() kbc\+\_\+read\+\_\+byte (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{uint8\+\_\+t $\ast$}]{byte }\end{DoxyParamCaption})}
+
+
+
+Reads a byte from a KBC port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Either KBC\+\_\+\+REG\+\_\+\+STAT or KBC\+\_\+\+REG\+\_\+\+OUT\+\_\+\+BUF \\
+\hline
+{\em byte} & Where to store the information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if reading was successful, non-\/zero otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{kbc_8h_a5fc61bc3727013e87ff63e764a1d4ac6}\label{kbc_8h_a5fc61bc3727013e87ff63e764a1d4ac6}} 
+\index{kbc.h@{kbc.h}!kbc\_read\_status@{kbc\_read\_status}}
+\index{kbc\_read\_status@{kbc\_read\_status}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{kbc\_read\_status()}{kbc\_read\_status()}}
+{\footnotesize\ttfamily int() kbc\+\_\+read\+\_\+status (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structkbc__status}{kbc\+\_\+status}} $\ast$}]{stat }\end{DoxyParamCaption})}
+
+
+
+Reads KBC status. 
+
+\begin{DoxyReturn}{Returns}
+0 if reading was successful, non-\/zero otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{kbc_8h_a7987e7fdbff84d08b67398e47affc07f}\label{kbc_8h_a7987e7fdbff84d08b67398e47affc07f}} 
+\index{kbc.h@{kbc.h}!kbc\_send\_byte@{kbc\_send\_byte}}
+\index{kbc\_send\_byte@{kbc\_send\_byte}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{kbc\_send\_byte()}{kbc\_send\_byte()}}
+{\footnotesize\ttfamily int() kbc\+\_\+send\+\_\+byte (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{uint8\+\_\+t}]{byte }\end{DoxyParamCaption})}
+
+
+
+Sends a byte to a KBC port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Either KBC\+\_\+\+REG\+\_\+\+CTRL or KBC\+\_\+\+REG\+\_\+\+IN\+\_\+\+BUF \\
+\hline
+{\em byte} & The byte to send \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the operation was successful, non-\/zero otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{kbc_8h_a9e95c5a39d4d301ae8f8264f49df0710}\label{kbc_8h_a9e95c5a39d4d301ae8f8264f49df0710}} 
+\index{kbc.h@{kbc.h}!kbc\_send\_command@{kbc\_send\_command}}
+\index{kbc\_send\_command@{kbc\_send\_command}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{kbc\_send\_command()}{kbc\_send\_command()}}
+{\footnotesize\ttfamily int() kbc\+\_\+send\+\_\+command (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{kbc_8h_af5f8680142252f63c28259815f2d8c11}{kbc\+\_\+command\+\_\+dest}}}]{dest,  }\item[{uint8\+\_\+t $\ast$}]{bytes,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Sends a command to a device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & The destination device \\
+\hline
+{\em bytes} & The bytes to send \\
+\hline
+{\em n} & The number of bytes in the command \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the operation was successful, non-\/zero otherwise 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{kbc_8h_a24882270a01597969f85e1b3340b7921}\label{kbc_8h_a24882270a01597969f85e1b3340b7921}} 
+\index{kbc.h@{kbc.h}!kbc\_command\_dest\_t@{kbc\_command\_dest\_t}}
+\index{kbc\_command\_dest\_t@{kbc\_command\_dest\_t}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{kbc\_command\_dest\_t}{kbc\_command\_dest\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{kbc_8h_af5f8680142252f63c28259815f2d8c11}{kbc\+\_\+command\+\_\+dest}} kbc\+\_\+command\+\_\+dest\+\_\+t}
+

@@ -1,0 +1,64 @@
+\hypertarget{timer_8h_source}{}\doxysection{timer.\+h}
+\label{timer_8h_source}\index{include/devices/timer.h@{include/devices/timer.h}}
+\mbox{\hyperlink{timer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00004}00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{errors_8h}{errors.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{events_8h}{events/events.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00014}\mbox{\hyperlink{group__i8254_gacf926951944b6cf370b7229ebd50dd8b}{00014}} \textcolor{preprocessor}{\#define TIMER\_FREQ 1193182 }}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00015}\mbox{\hyperlink{group__i8254_ga30bf84c312af248cb81bb224e09f9ba8}{00015}} \textcolor{preprocessor}{\#define TIMER0\_IRQ 0 }}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00017}00017 \textcolor{comment}{/* I/O port addresses */}}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00019}\mbox{\hyperlink{group__i8254_gacc9ff9df4a9674a1ce9ba08fc4a4679e}{00019}} \textcolor{preprocessor}{\#define TIMER\_0    0x40 }}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00020}\mbox{\hyperlink{group__i8254_gac62c99c2a9289891c1b83052242cca49}{00020}} \textcolor{preprocessor}{\#define TIMER\_1    0x41 }}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00021}\mbox{\hyperlink{group__i8254_ga1f34f18ad0ab8cace46b615773b48735}{00021}} \textcolor{preprocessor}{\#define TIMER\_2    0x42 }}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00022}\mbox{\hyperlink{group__i8254_ga282832448fb0281ef53d243c1cd48491}{00022}} \textcolor{preprocessor}{\#define TIMER\_CTRL 0x43 }}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00024}\mbox{\hyperlink{group__i8254_ga51b3a5e3d4811ca063fe25e35560ab40}{00024}} \textcolor{preprocessor}{\#define SPEAKER\_CTRL 0x61 }}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00026}00026 \textcolor{comment}{/* Timer control */}}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00028}00028 \textcolor{comment}{/* Timer selection: bits 7 and 6 */}}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00030}\mbox{\hyperlink{group__i8254_ga6a4822642d40c248435692324a818010}{00030}} \textcolor{preprocessor}{\#define TIMER\_SEL0   0x00              }}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00031}\mbox{\hyperlink{group__i8254_ga8349623fd8d99f9cc5d8ae29d78594fc}{00031}} \textcolor{preprocessor}{\#define TIMER\_SEL1   BIT(6)            }}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00032}\mbox{\hyperlink{group__i8254_ga142a255de0dbc48aeabd45fc10c33672}{00032}} \textcolor{preprocessor}{\#define TIMER\_SEL2   BIT(7)            }}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00033}\mbox{\hyperlink{group__i8254_ga4c2eecbfb96744a9c2af71dba75ecb18}{00033}} \textcolor{preprocessor}{\#define TIMER\_RB\_CMD (BIT(7) | BIT(6)) }}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00035}00035 \textcolor{comment}{/* Register selection: bits 5 and 4 */}}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00037}\mbox{\hyperlink{group__i8254_gac18cb814ebd0d67235392c330e0e3504}{00037}} \textcolor{preprocessor}{\#define TIMER\_LSB     BIT(4)                  }}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00038}\mbox{\hyperlink{group__i8254_ga2a8a6d363c612d756cd8d78480f7cd04}{00038}} \textcolor{preprocessor}{\#define TIMER\_MSB     BIT(5)                  }}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00039}\mbox{\hyperlink{group__i8254_ga8c0f1933323274c765e23837e4fbc8c7}{00039}} \textcolor{preprocessor}{\#define TIMER\_LSB\_MSB (TIMER\_LSB | TIMER\_MSB) }}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00041}00041 \textcolor{comment}{/* Operating mode: bits 3, 2 and 1 */}}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00043}\mbox{\hyperlink{group__i8254_ga435d5aca68144c6c2e8df9eafdcfdcd7}{00043}} \textcolor{preprocessor}{\#define TIMER\_OPERATING\_MODE (BIT(1) | BIT(2) | BIT(3))}}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00044}\mbox{\hyperlink{group__i8254_ga4745cbf21da3d3fea5dbb080b2b73bac}{00044}} \textcolor{preprocessor}{\#define TIMER\_SQR\_WAVE (BIT(2) | BIT(1)) }}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00045}\mbox{\hyperlink{group__i8254_ga5d4449e0fa1cf4a4d107a48a04a1265f}{00045}} \textcolor{preprocessor}{\#define TIMER\_RATE\_GEN BIT(2)            }}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00048}00048 \textcolor{comment}{/* Counting mode: bit 0 */}}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00050}\mbox{\hyperlink{group__i8254_ga325b992a371d5d981c4eceff42fa5956}{00050}} \textcolor{preprocessor}{\#define TIMER\_BCD 0x01 }}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00051}\mbox{\hyperlink{group__i8254_gad2913dcf2f91453317bd035589ac0a7d}{00051}} \textcolor{preprocessor}{\#define TIMER\_BIN 0x00 }}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00053}00053 \textcolor{comment}{/* READ-\/BACK COMMAND FORMAT */}}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00055}\mbox{\hyperlink{group__i8254_ga6c248216df24b5e9d907d126d80bd195}{00055}} \textcolor{preprocessor}{\#define TIMER\_RB\_COUNT\_  BIT(5)}}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00056}\mbox{\hyperlink{group__i8254_ga08b4952bb7058684a3f8f66be04dd45e}{00056}} \textcolor{preprocessor}{\#define TIMER\_RB\_STATUS\_ BIT(4)}}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00057}\mbox{\hyperlink{group__i8254_gaf598b17740e07842a0545af512714711}{00057}} \textcolor{preprocessor}{\#define TIMER\_RB\_SEL(n)  BIT((n) + 1)}}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00061}\mbox{\hyperlink{timer_8h_affa146d164b406b592638af342edcfd6}{00061}} \textcolor{preprocessor}{\#define TIMER\_DONT\_CHANGE (BIT(0) | BIT(1) | BIT(2) | BIT(3))}}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00062}\mbox{\hyperlink{timer_8h_ae8d62a142b0377cbf0dd7bf10b0e3d09}{00062}} \textcolor{preprocessor}{\#define TIMER\_SEL(n) (n << 6) }}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00069}\mbox{\hyperlink{timer_8h_a8cf79ed46781e2ec79109a5586eeaecf}{00069}} int (\mbox{\hyperlink{timer_8h_a8cf79ed46781e2ec79109a5586eeaecf}{timer\_init}})();}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00076}\mbox{\hyperlink{timer_8h_a2729110ab965f83aeebd9ea4e36c58ed}{00076}} int (\mbox{\hyperlink{timer_8h_a2729110ab965f83aeebd9ea4e36c58ed}{timer\_cleanup}})();}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00083}\mbox{\hyperlink{timer_8h_a74c67a2dec2c0d3d6f0cf68e89d4b14e}{00083}} int (\mbox{\hyperlink{timer_8h_a74c67a2dec2c0d3d6f0cf68e89d4b14e}{timer\_subscribe\_interrupts}})();}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00090}\mbox{\hyperlink{timer_8h_a34c22ebdcbc43e47f0ad8406704d3610}{00090}} int (\mbox{\hyperlink{timer_8h_a34c22ebdcbc43e47f0ad8406704d3610}{timer\_unsubscribe\_interrupts}})();}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00096}\mbox{\hyperlink{timer_8h_aafedfee90eab312a1063ce96846bb551}{00096}} void (\mbox{\hyperlink{timer_8h_aafedfee90eab312a1063ce96846bb551}{timer\_handle\_interrupt}})(\textcolor{keyword}{struct }\mbox{\hyperlink{structevent}{event}} *\mbox{\hyperlink{structevent}{event}});}
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{timer_8h_source_l00102}\mbox{\hyperlink{timer_8h_a7ceb1bfca3ac0c5979ead1096eaeaef6}{00102}} \textcolor{keywordtype}{unsigned} long (\mbox{\hyperlink{timer_8h_a7ceb1bfca3ac0c5979ead1096eaeaef6}{timer\_get\_frequency}})();}
+
+\end{DoxyCode}

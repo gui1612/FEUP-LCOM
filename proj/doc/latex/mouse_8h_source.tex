@@ -1,0 +1,52 @@
+\hypertarget{mouse_8h_source}{}\doxysection{mouse.\+h}
+\label{mouse_8h_source}\index{include/devices/mouse.h@{include/devices/mouse.h}}
+\mbox{\hyperlink{mouse_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00004}00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{errors_8h}{errors.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{events_8h}{events/events.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00008}\mbox{\hyperlink{mouse_8h_a85964cb90343bb1a029b1d1b4229f910}{00008}} \textcolor{preprocessor}{\#define MOUSE\_IRQ 12}}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00009}\mbox{\hyperlink{mouse_8h_acc68b186472f374c65fcbbecfec8a6cd}{00009}} \textcolor{preprocessor}{\#define MOUSE\_SYNC\_MASK BIT(3)}}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00010}\mbox{\hyperlink{mouse_8h_a762748efed9e84b453f9a53df24f92bb}{00010}} \textcolor{preprocessor}{\#define MOUSE\_PACKET\_SIZE 3}}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00012}\mbox{\hyperlink{mouse_8h_ae0f95694f6f137fcae25644972556873}{00012}} \textcolor{preprocessor}{\#define MOUSE\_Y\_SIGN BIT(5)}}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00013}\mbox{\hyperlink{mouse_8h_acd43b7d72e2f4da511b0f8a73df0fe79}{00013}} \textcolor{preprocessor}{\#define MOUSE\_X\_SIGN BIT(4)}}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00014}\mbox{\hyperlink{mouse_8h_a3a36fb9321353212c39ec747af903d54}{00014}} \textcolor{preprocessor}{\#define MOUSE\_BTN\_LEFT BIT(0)}}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00016}\mbox{\hyperlink{structmouse__packet}{00016}} \textcolor{keyword}{struct }\mbox{\hyperlink{structmouse__packet}{mouse\_packet}} \{}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00017}\mbox{\hyperlink{structmouse__packet_a163b6b78d05a8ef71c642b789c60f3fc}{00017}}   \textcolor{keywordtype}{bool} \mbox{\hyperlink{structmouse__packet_a163b6b78d05a8ef71c642b789c60f3fc}{lb}};}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00018}\mbox{\hyperlink{structmouse__packet_af7ca4d5ef523a8063f5c6abb590bcd52}{00018}}   int16\_t \mbox{\hyperlink{structmouse__packet_af7ca4d5ef523a8063f5c6abb590bcd52}{delta\_x}};}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00019}\mbox{\hyperlink{structmouse__packet_a71594f319176c43b07db5f0e930251b6}{00019}}   int16\_t \mbox{\hyperlink{structmouse__packet_a71594f319176c43b07db5f0e930251b6}{delta\_y}};}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00020}00020 \};}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00027}\mbox{\hyperlink{mouse_8h_afd40a1632ee7a5443b85b271dcf8b7ae}{00027}} int (\mbox{\hyperlink{mouse_8h_afd40a1632ee7a5443b85b271dcf8b7ae}{mouse\_init}})(uint16\_t screen\_width, uint16\_t screen\_height);}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00034}\mbox{\hyperlink{mouse_8h_ab906040eb4528b39bc72f5d127ddca63}{00034}} int (\mbox{\hyperlink{mouse_8h_ab906040eb4528b39bc72f5d127ddca63}{mouse\_cleanup}})();}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00041}\mbox{\hyperlink{mouse_8h_a5cab36c12945662a62fe124c448d4d27}{00041}} int (\mbox{\hyperlink{mouse_8h_a5cab36c12945662a62fe124c448d4d27}{mouse\_subscribe\_interrupts}})();}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00048}\mbox{\hyperlink{mouse_8h_adaf9bbdd3ddda1b50021f21c37df1c9c}{00048}} int (\mbox{\hyperlink{mouse_8h_adaf9bbdd3ddda1b50021f21c37df1c9c}{mouse\_unsubscribe\_interrupts}})();}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00054}\mbox{\hyperlink{mouse_8h_a68d57980bbb23afa730729ec69c6adb8}{00054}} void (\mbox{\hyperlink{mouse_8h_a68d57980bbb23afa730729ec69c6adb8}{mouse\_parse\_packet}})(\textcolor{keyword}{struct }\mbox{\hyperlink{structmouse__packet}{mouse\_packet}} *packet, uint8\_t *bytes);}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00060}\mbox{\hyperlink{mouse_8h_a06eb6cea04c3b6902cf8c0db2c687b76}{00060}} void (\mbox{\hyperlink{mouse_8h_a06eb6cea04c3b6902cf8c0db2c687b76}{mouse\_handle\_interrupt}})(\textcolor{keyword}{struct }\mbox{\hyperlink{structevent}{event}} *ev);}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00066}\mbox{\hyperlink{mouse_8h_ad26048a13b61b2578253653f07612ad3}{00066}} void (\mbox{\hyperlink{mouse_8h_ad26048a13b61b2578253653f07612ad3}{mouse\_handle\_packet}})(\textcolor{keyword}{struct }\mbox{\hyperlink{structmouse__packet}{mouse\_packet}} *packet);}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00072}\mbox{\hyperlink{mouse_8h_a3c4e368c416224abdef4276beb3ef7e4}{00072}} int (\mbox{\hyperlink{mouse_8h_a3c4e368c416224abdef4276beb3ef7e4}{mouse\_enable\_data\_reporting\_custom}})();}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00078}\mbox{\hyperlink{mouse_8h_a7e311379d4d64f88873ef8ade5c82a25}{00078}} int (\mbox{\hyperlink{mouse_8h_a7e311379d4d64f88873ef8ade5c82a25}{mouse\_disable\_data\_reporting}})();}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00084}\mbox{\hyperlink{mouse_8h_a0b7b792a5d7d8d05abd500a047064313}{00084}} int (\mbox{\hyperlink{mouse_8h_a0b7b792a5d7d8d05abd500a047064313}{mouse\_enable\_stream\_mode}})();}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00089}\mbox{\hyperlink{mouse_8h_ae6308866c3bca10e2cefc4c21ee8def9}{00089}} uint16\_t (\mbox{\hyperlink{mouse_8h_ae6308866c3bca10e2cefc4c21ee8def9}{mouse\_get\_x}})();}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00094}\mbox{\hyperlink{mouse_8h_a4336a2957949424b97745c61f55447ef}{00094}} uint16\_t (\mbox{\hyperlink{mouse_8h_a4336a2957949424b97745c61f55447ef}{mouse\_get\_y}})();}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00104}\mbox{\hyperlink{mouse_8h_af9ab14513eaf3e03912b0f016b5247a1}{00104}} int (\mbox{\hyperlink{mouse_8h_af9ab14513eaf3e03912b0f016b5247a1}{mouse\_is\_in\_position}})(uint16\_t min\_x, uint16\_t min\_y, uint16\_t max\_x, uint16\_t max\_y);}
+
+\end{DoxyCode}

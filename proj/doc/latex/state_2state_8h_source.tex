@@ -1,0 +1,33 @@
+\hypertarget{state_2state_8h_source}{}\doxysection{state.\+h}
+\label{state_2state_8h_source}\index{include/state/state.h@{include/state/state.h}}
+\mbox{\hyperlink{state_2state_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00004}00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{errors_8h}{errors.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00006}\mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248}{00006}} \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00007}\mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248a0cb1b2c6a7db1f1084886c98909a3f36}{00007}}   \mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248a0cb1b2c6a7db1f1084886c98909a3f36}{INIT}},}
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00008}\mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248a4c40e60bc71a32b924ce1f08d57f9721}{00008}}   \mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248a4c40e60bc71a32b924ce1f08d57f9721}{MENU}},}
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00009}\mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248ad50cf309d7568040619ed26ee6835a84}{00009}}   \mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248ad50cf309d7568040619ed26ee6835a84}{GAME}},}
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00010}00010   \mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248a403778345700cbd36b5b26352b144f78}{MULTIPLAYER}}}
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00011}\mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248a403778345700cbd36b5b26352b144f78}{00011}} \} \mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248}{state\_t}};}
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00013}\mbox{\hyperlink{structstate__handler}{00013}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00014}\mbox{\hyperlink{structstate__handler_aa64a4c968904d3a37811015666e90e88}{00014}}   \mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248}{state\_t}} \mbox{\hyperlink{structstate__handler_aa64a4c968904d3a37811015666e90e88}{state}};}
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00015}\mbox{\hyperlink{structstate__handler_a6377585e351405bb6e0bac16a964b869}{00015}}   void (*init)();}
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00016}\mbox{\hyperlink{structstate__handler_abf95f4c303f02617e8034314c71adac7}{00016}}   void (*cleanup)();}
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00017}00017 \} \mbox{\hyperlink{structstate__handler}{state\_handler}};}
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00022}\mbox{\hyperlink{state_2state_8h_a6e1c07b1084da336f48c4d0ac4037530}{00022}} int (\mbox{\hyperlink{state_2state_8h_a6e1c07b1084da336f48c4d0ac4037530}{state\_init}})();}
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00027}\mbox{\hyperlink{state_2state_8h_aa1b996ace516d2b20494837678f9c577}{00027}} int (\mbox{\hyperlink{state_2state_8h_aa1b996ace516d2b20494837678f9c577}{state\_cleanup}})();}
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00035}\mbox{\hyperlink{state_2state_8h_aebb6709ff4c71e1ae8290aa653295c20}{00035}} int (\mbox{\hyperlink{state_2state_8h_aebb6709ff4c71e1ae8290aa653295c20}{state\_register}})(\mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248}{state\_t}} state, void (*init)(), \textcolor{keywordtype}{void} (*cleanup)());}
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00041}\mbox{\hyperlink{state_2state_8h_a2d3d6f9c5297c581d97c8acfd08a2389}{00041}} int (\mbox{\hyperlink{state_2state_8h_a2d3d6f9c5297c581d97c8acfd08a2389}{state\_set}})(\mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248}{state\_t}} state);}
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{state_2state_8h_source_l00046}\mbox{\hyperlink{state_2state_8h_a927a58c428d7d1794d39e81c392f796d}{00046}} \mbox{\hyperlink{state_2state_8h_aa0aafed44fec19806d8f9ad834be1248}{state\_t}} (\mbox{\hyperlink{state_2state_8h_a927a58c428d7d1794d39e81c392f796d}{state\_get}})();}
+
+\end{DoxyCode}

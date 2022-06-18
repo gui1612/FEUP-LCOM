@@ -1,0 +1,204 @@
+\hypertarget{vector_8h}{}\doxysection{include/vector/vector.h File Reference}
+\label{vector_8h}\index{include/vector/vector.h@{include/vector/vector.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}errors.\+h\char`\"{}}\newline
+Include dependency graph for vector.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structvector}{vector}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{vector_8h_a7b30832f881a720ca819e81542da2f53}{VEC\+\_\+\+DEFAULT\+\_\+\+CAPACITY}}~(16)
+\item 
+\#define \mbox{\hyperlink{vector_8h_a57f01238429b810cdc747d5d678d2493}{VEC\+\_\+\+DEFAULT\+\_\+\+INCREMENT}}~(16)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structvector}{vector}} $\ast$() \mbox{\hyperlink{vector_8h_ac07d0a8fd408771bc0e74fa35b482033}{vec\+\_\+create}} (size\+\_\+t base\+\_\+size)
+\item 
+void() \mbox{\hyperlink{vector_8h_a20bd2d64b20fdea68baa766dbe2e08b4}{vec\+\_\+destroy}} (\mbox{\hyperlink{structvector}{vector}} $\ast$vec)
+\item 
+int() \mbox{\hyperlink{vector_8h_a56f7defa9310421079badc96d73ae9ba}{vec\+\_\+insert}} (\mbox{\hyperlink{structvector}{vector}} $\ast$vec, void $\ast$element, size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Insert a copy of element at the given index. If the provided index is greater than or equal to the vector\textquotesingle{}s current length, the element will be inserted at the end of the vector. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{vector_8h_a00dff486c0121a8f2158d2968e96b3de}{vec\+\_\+erase}} (\mbox{\hyperlink{structvector}{vector}} $\ast$vec, size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Erases values from vector. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{vector_8h_a87e95b8bce160b665fc1c53266a69924}{vec\+\_\+resize}} (\mbox{\hyperlink{structvector}{vector}} $\ast$vec, size\+\_\+t new\+\_\+capacity)
+\begin{DoxyCompactList}\small\item\em Resizes vector. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{vector_8h_ae2ee8f0c36d06ed2ce174b28f2266d94}{vec\+\_\+clear}} (\mbox{\hyperlink{structvector}{vector}} $\ast$vec)
+\begin{DoxyCompactList}\small\item\em Clears the vector. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{vector_8h_a92ba878fc4c9ac3e9d38aeffb0953f1b}{vec\+\_\+fill}} (\mbox{\hyperlink{structvector}{vector}} $\ast$vec, void $\ast$element)
+\begin{DoxyCompactList}\small\item\em Fill entire vector with copies of element. The vector\textquotesingle{}s capacity remains unchanged and its length will be set to its capacity. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{vector_8h_aa846e8bb320520f0f7b6c4a60b91eeb6}{vec\+\_\+push}} (\mbox{\hyperlink{structvector}{vector}} $\ast$vec, void $\ast$element)
+\begin{DoxyCompactList}\small\item\em Pushes value to vector. \end{DoxyCompactList}\item 
+void $\ast$() \mbox{\hyperlink{vector_8h_a66a0abd59fb6e9a3d2f995bc2232dc50}{vec\+\_\+at}} (\mbox{\hyperlink{structvector}{vector}} $\ast$vec, size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Get the address of an element in a vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{vector_8h_a7b30832f881a720ca819e81542da2f53}\label{vector_8h_a7b30832f881a720ca819e81542da2f53}} 
+\index{vector.h@{vector.h}!VEC\_DEFAULT\_CAPACITY@{VEC\_DEFAULT\_CAPACITY}}
+\index{VEC\_DEFAULT\_CAPACITY@{VEC\_DEFAULT\_CAPACITY}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{VEC\_DEFAULT\_CAPACITY}{VEC\_DEFAULT\_CAPACITY}}
+{\footnotesize\ttfamily \#define VEC\+\_\+\+DEFAULT\+\_\+\+CAPACITY~(16)}
+
+
+
+Definition at line \mbox{\hyperlink{vector_8h_source_l00006}{6}} of file \mbox{\hyperlink{vector_8h_source}{vector.\+h}}.
+
+\mbox{\Hypertarget{vector_8h_a57f01238429b810cdc747d5d678d2493}\label{vector_8h_a57f01238429b810cdc747d5d678d2493}} 
+\index{vector.h@{vector.h}!VEC\_DEFAULT\_INCREMENT@{VEC\_DEFAULT\_INCREMENT}}
+\index{VEC\_DEFAULT\_INCREMENT@{VEC\_DEFAULT\_INCREMENT}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{VEC\_DEFAULT\_INCREMENT}{VEC\_DEFAULT\_INCREMENT}}
+{\footnotesize\ttfamily \#define VEC\+\_\+\+DEFAULT\+\_\+\+INCREMENT~(16)}
+
+
+
+Definition at line \mbox{\hyperlink{vector_8h_source_l00007}{7}} of file \mbox{\hyperlink{vector_8h_source}{vector.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{vector_8h_a66a0abd59fb6e9a3d2f995bc2232dc50}\label{vector_8h_a66a0abd59fb6e9a3d2f995bc2232dc50}} 
+\index{vector.h@{vector.h}!vec\_at@{vec\_at}}
+\index{vec\_at@{vec\_at}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{vec\_at()}{vec\_at()}}
+{\footnotesize\ttfamily void $\ast$() vec\+\_\+at (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvector}{vector}} $\ast$}]{vec,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Get the address of an element in a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & The vector to search \\
+\hline
+{\em index} & The index of the element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8h_ae2ee8f0c36d06ed2ce174b28f2266d94}\label{vector_8h_ae2ee8f0c36d06ed2ce174b28f2266d94}} 
+\index{vector.h@{vector.h}!vec\_clear@{vec\_clear}}
+\index{vec\_clear@{vec\_clear}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{vec\_clear()}{vec\_clear()}}
+{\footnotesize\ttfamily void() vec\+\_\+clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvector}{vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+
+
+
+Clears the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & The vector to clear \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8h_ac07d0a8fd408771bc0e74fa35b482033}\label{vector_8h_ac07d0a8fd408771bc0e74fa35b482033}} 
+\index{vector.h@{vector.h}!vec\_create@{vec\_create}}
+\index{vec\_create@{vec\_create}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{vec\_create()}{vec\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structvector}{vector}} $\ast$() vec\+\_\+create (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{base\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_a20bd2d64b20fdea68baa766dbe2e08b4}\label{vector_8h_a20bd2d64b20fdea68baa766dbe2e08b4}} 
+\index{vector.h@{vector.h}!vec\_destroy@{vec\_destroy}}
+\index{vec\_destroy@{vec\_destroy}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{vec\_destroy()}{vec\_destroy()}}
+{\footnotesize\ttfamily void() vec\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvector}{vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_a00dff486c0121a8f2158d2968e96b3de}\label{vector_8h_a00dff486c0121a8f2158d2968e96b3de}} 
+\index{vector.h@{vector.h}!vec\_erase@{vec\_erase}}
+\index{vec\_erase@{vec\_erase}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{vec\_erase()}{vec\_erase()}}
+{\footnotesize\ttfamily int() vec\+\_\+erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvector}{vector}} $\ast$}]{vec,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Erases values from vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & Vector to erase the value from \\
+\hline
+{\em index} & Index of the value to be erased \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8h_a92ba878fc4c9ac3e9d38aeffb0953f1b}\label{vector_8h_a92ba878fc4c9ac3e9d38aeffb0953f1b}} 
+\index{vector.h@{vector.h}!vec\_fill@{vec\_fill}}
+\index{vec\_fill@{vec\_fill}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{vec\_fill()}{vec\_fill()}}
+{\footnotesize\ttfamily int() vec\+\_\+fill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvector}{vector}} $\ast$}]{vec,  }\item[{void $\ast$}]{element }\end{DoxyParamCaption})}
+
+
+
+Fill entire vector with copies of element. The vector\textquotesingle{}s capacity remains unchanged and its length will be set to its capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & The vector to fill \\
+\hline
+{\em element} & The element to fill the vector with, or NULL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0, if operation is sucessful, or 1, if an error occured 
+\end{DoxyReturn}
+\mbox{\Hypertarget{vector_8h_a56f7defa9310421079badc96d73ae9ba}\label{vector_8h_a56f7defa9310421079badc96d73ae9ba}} 
+\index{vector.h@{vector.h}!vec\_insert@{vec\_insert}}
+\index{vec\_insert@{vec\_insert}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{vec\_insert()}{vec\_insert()}}
+{\footnotesize\ttfamily int() vec\+\_\+insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvector}{vector}} $\ast$}]{vec,  }\item[{void $\ast$}]{element,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Insert a copy of element at the given index. If the provided index is greater than or equal to the vector\textquotesingle{}s current length, the element will be inserted at the end of the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & \\
+\hline
+{\em element} & \\
+\hline
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{vector_8h_aa846e8bb320520f0f7b6c4a60b91eeb6}\label{vector_8h_aa846e8bb320520f0f7b6c4a60b91eeb6}} 
+\index{vector.h@{vector.h}!vec\_push@{vec\_push}}
+\index{vec\_push@{vec\_push}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{vec\_push()}{vec\_push()}}
+{\footnotesize\ttfamily int() vec\+\_\+push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvector}{vector}} $\ast$}]{vec,  }\item[{void $\ast$}]{element }\end{DoxyParamCaption})}
+
+
+
+Pushes value to vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & Vector to push the value to \\
+\hline
+{\em element} & Element to be pushed to the vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8h_a87e95b8bce160b665fc1c53266a69924}\label{vector_8h_a87e95b8bce160b665fc1c53266a69924}} 
+\index{vector.h@{vector.h}!vec\_resize@{vec\_resize}}
+\index{vec\_resize@{vec\_resize}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{vec\_resize()}{vec\_resize()}}
+{\footnotesize\ttfamily int() vec\+\_\+resize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvector}{vector}} $\ast$}]{vec,  }\item[{size\+\_\+t}]{new\+\_\+capacity }\end{DoxyParamCaption})}
+
+
+
+Resizes vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & Vector to be resized \\
+\hline
+{\em new\+\_\+capacity} & The new vector capacity \\
+\hline
+\end{DoxyParams}

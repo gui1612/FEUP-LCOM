@@ -1,0 +1,215 @@
+\hypertarget{queue_8h}{}\doxysection{include/queue/queue.h File Reference}
+\label{queue_8h}\index{include/queue/queue.h@{include/queue/queue.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for queue.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structqueue__node}{queue\+\_\+node}}
+\begin{DoxyCompactList}\small\item\em Data Structure for a Single Node. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structqueue}{queue}}
+\begin{DoxyCompactList}\small\item\em Data Structure for a Queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{queue_8h_a56f9c56597a978253c2daf3fe45b9cd0}{ERR\+\_\+\+MAX\+\_\+\+CAPACITY\+\_\+\+EXCEEDED}}~1;
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structqueue__node}{queue\+\_\+node}} \mbox{\hyperlink{queue_8h_acf2bf85d56b5890cb2f39c40a90e368c}{queue\+\_\+node}}
+\begin{DoxyCompactList}\small\item\em Data Structure for a Single Node. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structqueue}{queue}} \mbox{\hyperlink{queue_8h_a092902733e164e20a40f08447ef1705a}{queue}}
+\begin{DoxyCompactList}\small\item\em Data Structure for a Queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{queue_8h_ac84a42a200a3c75da726e15ff766f950}{front}} (\mbox{\hyperlink{structqueue}{queue}} $\ast$q)
+\begin{DoxyCompactList}\small\item\em Retrieves a pointer to the front/head element. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{queue_8h_a160f5fb5e5d2f8bee7eab30790936a7b}{back}} (\mbox{\hyperlink{structqueue}{queue}} $\ast$q)
+\begin{DoxyCompactList}\small\item\em Retrieves a pointer to the the back/tail element. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{queue_8h_ad3e9675df21ddf032d982bb391a5b601}{size}} (\mbox{\hyperlink{structqueue}{queue}} $\ast$q)
+\begin{DoxyCompactList}\small\item\em Retrieves the size of the queue. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{queue_8h_a8111acb9e28a2678ea9a66c7fe051a98}{is\+\_\+empty}} (\mbox{\hyperlink{structqueue}{queue}} $\ast$q)
+\begin{DoxyCompactList}\small\item\em Returns true if the queue is empty and false otherwise. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{queue_8h_ae423a40c076e621d0c1119852f8bbfce}{is\+\_\+full}} (\mbox{\hyperlink{structqueue}{queue}} $\ast$q)
+\begin{DoxyCompactList}\small\item\em Returns true if the queue is full and false otherwise. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structqueue}{queue}} $\ast$ \mbox{\hyperlink{queue_8h_ab32dd34cbe782025a28969d1c7b80f3a}{queue\+\_\+create}} (size\+\_\+t capacity, size\+\_\+t base\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Creates a Queue. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{queue_8h_a6c911c34d594d16247eeff0da09d241b}{queue\+\_\+push}} (\mbox{\hyperlink{structqueue}{queue}} $\ast$q, void $\ast$val)
+\begin{DoxyCompactList}\small\item\em Adds an element to the back of the queue. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{queue_8h_aff106f4a755b6ebac5fdd512e474070c}{queue\+\_\+pop}} (\mbox{\hyperlink{structqueue}{queue}} $\ast$q)
+\begin{DoxyCompactList}\small\item\em Removes an element from the front of the queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queue_8h_a21d75708e816b8fc3299ac8e6f7109eb}{queue\+\_\+destroy}} (\mbox{\hyperlink{structqueue}{queue}} $\ast$q)
+\begin{DoxyCompactList}\small\item\em Destroys the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{queue_8h_a56f9c56597a978253c2daf3fe45b9cd0}\label{queue_8h_a56f9c56597a978253c2daf3fe45b9cd0}} 
+\index{queue.h@{queue.h}!ERR\_MAX\_CAPACITY\_EXCEEDED@{ERR\_MAX\_CAPACITY\_EXCEEDED}}
+\index{ERR\_MAX\_CAPACITY\_EXCEEDED@{ERR\_MAX\_CAPACITY\_EXCEEDED}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{ERR\_MAX\_CAPACITY\_EXCEEDED}{ERR\_MAX\_CAPACITY\_EXCEEDED}}
+{\footnotesize\ttfamily \#define ERR\+\_\+\+MAX\+\_\+\+CAPACITY\+\_\+\+EXCEEDED~1;}
+
+
+
+Definition at line \mbox{\hyperlink{queue_8h_source_l00007}{7}} of file \mbox{\hyperlink{queue_8h_source}{queue.\+h}}.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{queue_8h_a092902733e164e20a40f08447ef1705a}\label{queue_8h_a092902733e164e20a40f08447ef1705a}} 
+\index{queue.h@{queue.h}!queue@{queue}}
+\index{queue@{queue}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{queue}{queue}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structqueue}{queue}} \mbox{\hyperlink{structqueue}{queue}}}
+
+
+
+Data Structure for a Queue. 
+
+\mbox{\Hypertarget{queue_8h_acf2bf85d56b5890cb2f39c40a90e368c}\label{queue_8h_acf2bf85d56b5890cb2f39c40a90e368c}} 
+\index{queue.h@{queue.h}!queue\_node@{queue\_node}}
+\index{queue\_node@{queue\_node}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{queue\_node}{queue\_node}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structqueue__node}{queue\+\_\+node}} \mbox{\hyperlink{structqueue__node}{queue\+\_\+node}}}
+
+
+
+Data Structure for a Single Node. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{queue_8h_a160f5fb5e5d2f8bee7eab30790936a7b}\label{queue_8h_a160f5fb5e5d2f8bee7eab30790936a7b}} 
+\index{queue.h@{queue.h}!back@{back}}
+\index{back@{back}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}}
+{\footnotesize\ttfamily void $\ast$ back (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+
+
+Retrieves a pointer to the the back/tail element. 
+
+\mbox{\Hypertarget{queue_8h_ac84a42a200a3c75da726e15ff766f950}\label{queue_8h_ac84a42a200a3c75da726e15ff766f950}} 
+\index{queue.h@{queue.h}!front@{front}}
+\index{front@{front}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}}
+{\footnotesize\ttfamily void $\ast$ front (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+
+
+Retrieves a pointer to the front/head element. 
+
+\mbox{\Hypertarget{queue_8h_a8111acb9e28a2678ea9a66c7fe051a98}\label{queue_8h_a8111acb9e28a2678ea9a66c7fe051a98}} 
+\index{queue.h@{queue.h}!is\_empty@{is\_empty}}
+\index{is\_empty@{is\_empty}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{is\_empty()}{is\_empty()}}
+{\footnotesize\ttfamily bool is\+\_\+empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+
+
+Returns true if the queue is empty and false otherwise. 
+
+\mbox{\Hypertarget{queue_8h_ae423a40c076e621d0c1119852f8bbfce}\label{queue_8h_ae423a40c076e621d0c1119852f8bbfce}} 
+\index{queue.h@{queue.h}!is\_full@{is\_full}}
+\index{is\_full@{is\_full}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{is\_full()}{is\_full()}}
+{\footnotesize\ttfamily bool is\+\_\+full (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+
+
+Returns true if the queue is full and false otherwise. 
+
+\mbox{\Hypertarget{queue_8h_ab32dd34cbe782025a28969d1c7b80f3a}\label{queue_8h_ab32dd34cbe782025a28969d1c7b80f3a}} 
+\index{queue.h@{queue.h}!queue\_create@{queue\_create}}
+\index{queue\_create@{queue\_create}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{queue\_create()}{queue\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structqueue}{queue}} $\ast$ queue\+\_\+create (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{capacity,  }\item[{size\+\_\+t}]{base\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Creates a Queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & Capacity of the queue \\
+\hline
+{\em base\+\_\+size} & Size, in bytes, of the elements of the queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Queue$\ast$ Pointer to the queue 
+\end{DoxyReturn}
+\mbox{\Hypertarget{queue_8h_a21d75708e816b8fc3299ac8e6f7109eb}\label{queue_8h_a21d75708e816b8fc3299ac8e6f7109eb}} 
+\index{queue.h@{queue.h}!queue\_destroy@{queue\_destroy}}
+\index{queue\_destroy@{queue\_destroy}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{queue\_destroy()}{queue\_destroy()}}
+{\footnotesize\ttfamily void queue\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+
+
+Destroys the queue. 
+
+\begin{DoxyNote}{Note}
+Everytime a Queue is used, at the end or in case of errors that might end the program, this function should be called, otherwise the memory allocated for the queue and its nodes won\textquotesingle{}t be freed.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & Pointer to the queue \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{queue_8h_aff106f4a755b6ebac5fdd512e474070c}\label{queue_8h_aff106f4a755b6ebac5fdd512e474070c}} 
+\index{queue.h@{queue.h}!queue\_pop@{queue\_pop}}
+\index{queue\_pop@{queue\_pop}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{queue\_pop()}{queue\_pop()}}
+{\footnotesize\ttfamily void $\ast$ queue\+\_\+pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+
+
+Removes an element from the front of the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & Pointer to the queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void$\ast$ Pointer to the element removed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{queue_8h_a6c911c34d594d16247eeff0da09d241b}\label{queue_8h_a6c911c34d594d16247eeff0da09d241b}} 
+\index{queue.h@{queue.h}!queue\_push@{queue\_push}}
+\index{queue\_push@{queue\_push}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{queue\_push()}{queue\_push()}}
+{\footnotesize\ttfamily int queue\+\_\+push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q,  }\item[{void $\ast$}]{val }\end{DoxyParamCaption})}
+
+
+
+Adds an element to the back of the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & Pointer to the queue \\
+\hline
+{\em val} & Value to be enqueued \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 if unsucessful 
+\end{DoxyReturn}
+\mbox{\Hypertarget{queue_8h_ad3e9675df21ddf032d982bb391a5b601}\label{queue_8h_ad3e9675df21ddf032d982bb391a5b601}} 
+\index{queue.h@{queue.h}!size@{size}}
+\index{size@{size}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily unsigned size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+
+
+Retrieves the size of the queue. 
+
