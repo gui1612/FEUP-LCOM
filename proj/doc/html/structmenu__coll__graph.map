@@ -1,4 +1,0 @@
-<map id="menu" name="menu">
-<area shape="rect" id="node1" title="Keeps menu options." alt="" coords="26,95,81,121"/>
-<area shape="rect" id="node2" href="$structmenu__option.html" title="Keeps menu info." alt="" coords="5,5,101,32"/>
-</map>

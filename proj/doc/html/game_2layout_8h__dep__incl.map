@@ -1,7 +1,0 @@
-<map id="include/game/layout.h" name="include/game/layout.h">
-<area shape="rect" id="node1" title=" " alt="" coords="98,5,247,32"/>
-<area shape="rect" id="node2" href="$model_2local__player_8h.html" title=" " alt="" coords="19,80,158,121"/>
-<area shape="rect" id="node4" href="$multiplayer_2layout_8h.html" title=" " alt="" coords="193,80,323,121"/>
-<area shape="rect" id="node3" href="$controller_2local__player_8h.html" title=" " alt="" coords="5,169,161,211"/>
-<area shape="rect" id="node5" href="$model_2remote__player_8h.html" title=" " alt="" coords="185,169,344,211"/>
-</map>
