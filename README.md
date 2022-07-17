@@ -1,6 +1,6 @@
 # FEUP-LC
 
-Labs from the LC course unit at FEUP.
+Project and Labs from the LC course unit at FEUP.
 
 ## Unit info
 
